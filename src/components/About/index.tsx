@@ -1,74 +1,81 @@
+"use client";
+
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+  };
+
   return (
     <section
       id="about"
-      className="bg-gray-1 pb-8 pt-20 dark:bg-dark-2 lg:pb-[70px] lg:pt-[120px]"
+      className="relative pb-8 pt-20 dark:bg-dark-2 lg:pb-[70px] lg:pt-[120px]"
+      style={{
+        backgroundImage: `url('/images/imagemPorto.png')`, // Define a imagem de fundo
+        backgroundSize: "cover", // Faz a imagem cobrir toda a seção
+        backgroundPosition: "center", // Centraliza a imagem
+      }}
     >
-      <div className="container">
+      {/* Camada de sobreposição para escurecer o fundo */}
+      <div className="absolute inset-0 bg-blue-950 bg-opacity-75"></div>
+
+      <div className="container relative z-10">
         <div className="wow fadeInUp" data-wow-delay=".2s">
           <div className="-mx-4 flex flex-wrap items-center">
+            {/* Texto principal */}
             <div className="w-full px-4 lg:w-1/2">
               <div className="mb-12 max-w-[540px] lg:mb-0">
-                <h2 className="mb-5 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-[40px] sm:leading-[1.2]">
-                  Excelência em Serviços Portuários e Operacionais
+                <h2 className="mb-5 text-3xl font-bold leading-tight text-white sm:text-[40px] sm:leading-[1.2]">
+                  {t("about.title")}
                 </h2>
-                <p className="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
-                  Com anos de experiência, a Galata é referência na prestação de
-                  serviços especializados para o setor portuário e industrial.
-                  Nosso compromisso é garantir qualidade, segurança e eficiência
-                  em todas as operações realizadas.
-                  <br /> <br />
-                  Contamos com uma equipe qualificada e soluções personalizadas
-                  para atender às necessidades de nossos clientes, desde limpeza
-                  industrial até suporte em operações logísticas.
+                <p className="mb-10 text-base leading-relaxed text-white">
+                  {t("about.description")}
                 </p>
-
                 <a
                   href="/#"
                   className="inline-flex items-center justify-center rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white duration-300 hover:bg-primary/90"
                 >
-                  Saiba Mais
+                  {t("about.cta")}
                 </a>
               </div>
             </div>
 
+            {/* Imagens nas laterais */}
             <div className="w-full px-4 lg:w-1/2">
               <div className="-mx-2 flex flex-wrap sm:-mx-4 lg:-mx-2 xl:-mx-4">
                 <div className="w-full px-2 sm:w-1/2 sm:px-4 lg:px-2 xl:px-4">
-                  <div
-                    className={`relative mb-4 sm:mb-8 sm:h-[400px] md:h-[540px] lg:h-[400px] xl:h-[500px] `}
-                  >
+                  <div className="relative mb-4 sm:mb-8 sm:h-[400px] md:h-[540px] lg:h-[400px] xl:h-[500px]">
                     <Image
                       src="/images/Galatas-maritimo-Circular-.png"
                       alt="Sobre a Galata"
                       fill
-                      className="h-full w-full object-cover object-center"
+                      className="object-cover"
                     />
                   </div>
                 </div>
-{/* fd */}
                 <div className="w-full px-2 sm:w-1/2 sm:px-4 lg:px-2 xl:px-4">
                   <div className="relative mb-4 sm:mb-8 sm:h-[220px] md:h-[346px] lg:mb-4 lg:h-[225px] xl:mb-8 xl:h-[310px]">
                     <Image
                       src="/images/about/equipe-galatas.png"
                       alt="Equipe da Galata"
                       fill
-                      className="h-full w-full object-cover object-center"
+                      className="object-cover"
                     />
                   </div>
-
-                  <div className="relative z-10 mb-4 flex items-center justify-center overflow-hidden bg-primary px-6 py-12 sm:mb-8 sm:h-[160px] sm:p-5 lg:mb-4 xl:mb-8">
+                  <div className="relative z-10 mb-4 flex items-center justify-center overflow-hidden bg-[#c4ae37] px-6 py-12 sm:mb-8 sm:h-[160px] sm:p-5 lg:mb-4 xl:mb-8">
                     <div>
                       <span className="block text-5xl font-extrabold text-white">
-                        25+
+                        {t("about.experience_years")}
                       </span>
                       <span className="block text-base font-semibold text-white">
-                        Anos de Experiência
+                        {t("about.experience_title")}
                       </span>
                       <span className="block text-base font-medium text-white text-opacity-70">
-                        Em Serviços Portuários e Logísticos
+                        {t("about.experience_description")}
                       </span>
                     </div>
                     <div>

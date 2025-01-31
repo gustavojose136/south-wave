@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const FeaturePage = () => {
   return (
     <main>
-      <Breadcrumb pageName="Pagina de servicos" />
+      {/* <Breadcrumb pageName="Pagina de servicos" /> */}
       <Features />
     </main>
   );

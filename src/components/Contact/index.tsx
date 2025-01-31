@@ -1,25 +1,71 @@
-// import React from 'react';
+"use client";
+
+import React from "react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="relative py-20 md:py-[120px]">
-      <div className="absolute left-0 top-0 -z-[1] h-full w-full dark:bg-dark"></div>
-      <div className="absolute left-0 top-0 -z-[1] h-1/2 w-full bg-[#E9F9FF] dark:bg-dark-700 lg:h-[45%] xl:h-1/2"></div>
+    <section
+      id="contact"
+      className="
+        relative
+        py-20
+        md:py-[120px]
+        min-h-[650px]
+        overflow-hidden
+      "
+    >
+      {/* IMAGEM DE FUNDO (opcional) */}
+      <img
+        src="/images/fundos/fundo-porto.jpg"
+        alt="Fundo Porto"
+        className="
+          absolute
+          inset-0
+          -z-[2]
+          h-full
+          w-full
+          object-cover
+        "
+      />
+
+      {/* OVERLAY ESCURO */}
+      <div
+        className="
+          absolute
+          inset-0
+          -z-[1]
+          bg-gradient-to-b
+          from-[#18216d]/80
+          to-[#0d123a]/90
+        "
+      />
+
       <div className="container px-4">
-        <div className="-mx-4 flex flex-wrap items-center">
+        <div
+          className="
+            -mx-4
+            flex
+            flex-wrap
+            items-center
+            justify-center
+          "
+        >
+          {/* COLUNA DE ENDEREÇO / LOCALIZAÇÃO */}
           <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
             <div className="ud-contact-content-wrapper">
               <div className="ud-contact-title mb-12 lg:mb-[150px]">
-                <span className="mb-6 block text-base font-medium text-dark dark:text-white">
+                <span className="mb-6 block text-base font-medium text-white">
                   CONTATO
                 </span>
-                <h2 className="max-w-[260px] text-[35px] font-semibold leading-[1.14] text-dark dark:text-white">
+                <h2 className="max-w-[360px] text-[35px] font-semibold leading-tight text-white md:text-4xl">
                   Vamos conversar sobre suas necessidades.
                 </h2>
               </div>
+
               <div className="mb-12 flex flex-wrap justify-between lg:mb-0">
                 <div className="mb-8 flex w-[330px] max-w-full">
                   <div className="mr-6 text-[32px] text-primary">
+                    {/* Ícone de Localização */}
                     <svg
                       width="29"
                       height="35"
@@ -31,24 +77,23 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="mb-[18px] text-lg font-semibold text-dark dark:text-white">
+                    <h3 className="mb-[18px] text-lg font-semibold text-white">
                       Nossa Localização
                     </h3>
-                    {/* <p className="text-base text-body-color dark:text-dark-6">
-                      Rua Waldemar Siepierski, Nº 200 - Sala 808
-                      <br />
-                      Bairro Rio Branco, Cariacica
-                    </p> */}
-                     <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29929.01396592672!2d-40.386485!3d-20.336382!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb83eaa0dadd491%3A0xd51cb1d9fa53c01b!2sR.%20Waldemar%20Siepierski%2C%20200%20-%20Rio%20Branco%2C%20Cariacica%20-%20ES%2C%2029147-600%2C%20Brasil!5e0!3m2!1spt-BR!2sus!4v1737487808021!5m2!1spt-BR!2sus"
-                    width="400%"
-                    height="200"
-                    loading="lazy"
-                  ></iframe>
+                    {/* MAPA RESPONSIVO */}
+                    <div className="relative w-full h-[200px] sm:h-[300px] overflow-hidden rounded-lg">
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29929.01396592672!2d-40.386485!3d-20.336382!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb83eaa0dadd491%3A0xd51cb1d9fa53c01b!2sR.%20Waldemar%20Siepierski%2C%20200%20-%20Rio%20Branco%2C%20Cariacica%20-%20ES%2C%2029147-600%2C%20Brasil!5e0!3m2!1spt-BR!2sus!4v1737487808021!5m2!1spt-BR!2sus"
+                        className="absolute inset-0 w-full h-full border-0"
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                      ></iframe>
+                    </div>
                   </div>
                 </div>
                 <div className="mb-8 flex w-[330px] max-w-full">
                   <div className="mr-6 text-[32px] text-primary">
+                    {/* Ícone de Email / Contato */}
                     <svg
                       width="34"
                       height="25"
@@ -59,13 +104,13 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="mb-[18px] text-lg font-semibold text-dark dark:text-white">
+                    <h3 className="mb-[18px] text-lg font-semibold text-white">
                       Como podemos ajudar?
                     </h3>
-                    <p className="mt-1 text-base text-body-color dark:text-dark-6">
+                    <p className="mt-1 text-base text-gray-200">
                       comercial@galatasservicos.com
                     </p>
-                    <p className="mt-1 text-base text-body-color dark:text-dark-6">
+                    <p className="mt-1 text-base text-gray-200">
                       Telefone: (27) 3073-4740
                     </p>
                   </div>
@@ -73,19 +118,35 @@ const Contact = () => {
               </div>
             </div>
           </div>
+
+          {/* FORMULÁRIO */}
           <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
             <div
-              className="wow fadeInUp rounded-lg bg-white px-8 py-10 shadow-testimonial dark:bg-dark-2 dark:shadow-none sm:px-10 sm:py-12 md:p-[60px] lg:p-10 lg:px-10 lg:py-12 2xl:p-[60px]"
+              className="
+                wow fadeInUp
+                rounded-lg
+                bg-white
+                px-8
+                py-10
+                shadow-testimonial
+                sm:px-10
+                sm:py-12
+                md:p-[60px]
+                lg:p-10
+                lg:px-10
+                lg:py-12
+                2xl:p-[60px]
+              "
               data-wow-delay=".2s"
             >
-              <h3 className="mb-8 text-2xl font-semibold text-dark dark:text-white md:text-[28px] md:leading-[1.42]">
+              <h3 className="mb-8 text-2xl font-semibold text-dark md:text-[28px] md:leading-[1.42]">
                 Envie-nos uma Mensagem
               </h3>
               <form>
                 <div className="mb-[22px]">
                   <label
                     htmlFor="fullName"
-                    className="mb-4 block text-sm text-body-color dark:text-dark-6"
+                    className="mb-4 block text-sm text-body-color"
                   >
                     Nome Completo*
                   </label>
@@ -93,13 +154,24 @@ const Contact = () => {
                     type="text"
                     name="fullName"
                     placeholder="Seu Nome"
-                    className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
+                    className="
+                      w-full
+                      border-0
+                      border-b
+                      border-[#f1f1f1]
+                      bg-transparent
+                      pb-3
+                      text-dark
+                      placeholder:text-body-color/60
+                      focus:border-primary
+                      focus:outline-none
+                    "
                   />
                 </div>
                 <div className="mb-[22px]">
                   <label
                     htmlFor="email"
-                    className="mb-4 block text-sm text-body-color dark:text-dark-6"
+                    className="mb-4 block text-sm text-body-color"
                   >
                     Email*
                   </label>
@@ -107,13 +179,24 @@ const Contact = () => {
                     type="email"
                     name="email"
                     placeholder="seuemail@dominio.com"
-                    className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
+                    className="
+                      w-full
+                      border-0
+                      border-b
+                      border-[#f1f1f1]
+                      bg-transparent
+                      pb-3
+                      text-dark
+                      placeholder:text-body-color/60
+                      focus:border-primary
+                      focus:outline-none
+                    "
                   />
                 </div>
                 <div className="mb-[22px]">
                   <label
                     htmlFor="phone"
-                    className="mb-4 block text-sm text-body-color dark:text-dark-6"
+                    className="mb-4 block text-sm text-body-color"
                   >
                     Telefone*
                   </label>
@@ -121,13 +204,24 @@ const Contact = () => {
                     type="text"
                     name="phone"
                     placeholder="(27) 99999-9999"
-                    className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
+                    className="
+                      w-full
+                      border-0
+                      border-b
+                      border-[#f1f1f1]
+                      bg-transparent
+                      pb-3
+                      text-dark
+                      placeholder:text-body-color/60
+                      focus:border-primary
+                      focus:outline-none
+                    "
                   />
                 </div>
                 <div className="mb-[30px]">
                   <label
                     htmlFor="message"
-                    className="mb-4 block text-sm text-body-color dark:text-dark-6"
+                    className="mb-4 block text-sm text-body-color"
                   >
                     Mensagem*
                   </label>
@@ -135,13 +229,40 @@ const Contact = () => {
                     name="message"
                     rows={1}
                     placeholder="Escreva sua mensagem aqui"
-                    className="w-full resize-none border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
+                    className="
+                      w-full
+                      resize-none
+                      border-0
+                      border-b
+                      border-[#f1f1f1]
+                      bg-transparent
+                      pb-3
+                      text-dark
+                      placeholder:text-body-color/60
+                      focus:border-primary
+                      focus:outline-none
+                    "
                   ></textarea>
                 </div>
                 <div className="mb-0">
                   <button
                     type="submit"
-                    className="inline-flex items-center justify-center rounded-md bg-primary px-10 py-3 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-primary/90"
+                    className="
+                      inline-flex
+                      items-center
+                      justify-center
+                      rounded-md
+                      bg-primary
+                      px-10
+                      py-3
+                      text-base
+                      font-medium
+                      text-white
+                      transition
+                      duration-300
+                      ease-in-out
+                      hover:bg-primary/90
+                    "
                   >
                     Enviar
                   </button>

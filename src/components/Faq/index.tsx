@@ -1,10 +1,50 @@
 import SectionTitle from "../Common/SectionTitle";
 import SingleFaq from "./SingleFaq";
+import { Icon } from "@iconify/react";
 
 const Faq = () => {
   return (
-    <section className="relative z-20 overflow-hidden bg-white pb-8 pt-20 dark:bg-dark lg:pb-[50px] lg:pt-[120px]">
-      <div className="container">
+    <section
+      className="
+        relative
+        z-20
+        overflow-hidden
+        min-h-[650px]   /* Altura mínima para caber o vídeo/imagem */
+        pt-20
+        pb-8
+        lg:pt-[120px]
+        lg:pb-[50px]
+      "
+    >
+      {/* VÍDEO DE FUNDO (pode trocar por <img> se quiser) */}
+      <video
+        className="
+          absolute
+          inset-0
+          h-full
+          w-full
+          object-cover
+          z-[-2]
+        "
+        src="/videos/dronePorto.mp4"
+        autoPlay
+        loop
+        muted
+      />
+
+      {/* OVERLAY DE GRADIENTE PARA ESCURECER O FUNDO E DESTACAR O TEXTO */}
+      <div
+        className="
+          absolute
+          inset-0
+          z-[-1]
+          bg-gradient-to-b
+          from-[#0e1342]/90
+          to-[#101645]/90
+        "
+      />
+
+      <div className="container relative z-10">
         <SectionTitle
           subtitle="FAQ"
           title="três motivos para você ser nosso parceiro comercial!"
@@ -13,42 +53,37 @@ const Faq = () => {
           center
         />
 
-        <div className="-mx-4 mt-[60px] flex flex-wrap lg:mt-20 justify-center">
+        {/* Se quiser dividir em colunas ou manter tudo em uma só, ajuste aqui */}
+        <div className="-mx-4 mt-[60px] flex flex-wrap justify-center lg:mt-20 items-stretch">
           <div className="w-full px-4 lg:w-1/2">
             <SingleFaq
               position={1}
               question="Consistência"
-              answer="Não abandonamos você, estamos no mercado a anos, e nos consolidamos nele, somos consistentes e isso nos torna mais fortes."
+              answer="Não abandonamos você, estamos no mercado há anos e nos consolidamos nele; somos consistentes e isso nos torna mais fortes."
             />
             <SingleFaq
               position={2}
               question="Experiência"
-              answer="Não é de uma hora para a outra que se cria uma grande empresa, <strong>estamos prestando serviços portuários a 20 anos </strong>, sabemos o que fazemos, dominamos o assunto."
+              answer="Não é de uma hora para a outra que se cria uma grande empresa. <strong>Estamos prestando serviços portuários há 20 anos</strong>. Sabemos o que fazemos, dominamos o assunto."
             />
             <SingleFaq
               position={3}
               question="Agilidade"
-              answer="Entregar no prazo é fundamental, e sabemos disso, nos orgulhamos de conseguir prever e cumprir os prazos firmados em contrato, isso se dá pela agilidade de nossos colaboradores."
+              answer="Entregar no prazo é fundamental, e sabemos disso. Nos orgulhamos de conseguir prever e cumprir os prazos firmados em contrato, graças à agilidade de nossos colaboradores."
             />
           </div>
 
-          {/* <div className="w-full px-4 lg:w-1/2">
-            <SingleFaq
-              question="Can I use this template for commercial project?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
-            />
-            <SingleFaq
-              question="Do you have plan to releasing Play Pro?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
-            />
-            <SingleFaq
-              question="Where and how to host this template?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
-            />
-          </div> */}
+          {/*
+            Se quiser mais perguntas à direita, descomente e ajuste
+            <div className="w-full px-4 lg:w-1/2">
+              <SingleFaq ... />
+              ...
+            </div>
+          */}
         </div>
       </div>
 
+      {/* Ícones decorativos (sua arte original) */}
       <div>
         <span className="absolute left-4 top-4 -z-[1]">
           <svg

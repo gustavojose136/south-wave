@@ -1,10 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer
-      className="relative z-10 bg-[#003C87] pt-20 lg:pt-[100px]"
+      className="relative z-10 bg-[#0e1342] pt-20 lg:pt-[100px]"
       data-wow-delay=".15s"
     >
       <div className="container">
@@ -14,17 +17,14 @@ const Footer = () => {
               <Link href="/" className="mb-6 inline-block max-w-[160px]">
                 <Image
                   src="/images/logo/logo-white.svg"
-                  alt="Gálatas Serviços"
+                  alt={t("footer.logo_alt")}
                   width={140}
                   height={30}
                   className="max-w-full"
                 />
               </Link>
               <p className="mb-8 max-w-[270px] text-base text-white">
-                Gálatas Serviços Marítimos e Terrestres, excelência em
-                transporte de cargas, movimentação portuária, serviços
-                terrestres e marítimos. Com 29 anos de história no Porto de
-                Vitória e Vila Velha.
+                {t("footer.description")}
               </p>
               <div className="-mx-3 flex items-center">
                 <a
@@ -32,6 +32,7 @@ const Footer = () => {
                   href="https://www.facebook.com/galatasservicos"
                   className="px-3 text-white hover:text-gray-300"
                 >
+                  {/* Ícone Facebook */}
                   <svg
                     width="22"
                     height="22"
@@ -39,15 +40,14 @@ const Footer = () => {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                     className="fill-current"
-                  >
-                    {/* Ícone Facebook */}
-                  </svg>
+                  ></svg>
                 </a>
                 <a
                   aria-label="LinkedIn link"
                   href="https://www.linkedin.com/company/galatasservicos"
                   className="px-3 text-white hover:text-gray-300"
                 >
+                  {/* Ícone LinkedIn */}
                   <svg
                     width="22"
                     height="22"
@@ -55,15 +55,14 @@ const Footer = () => {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                     className="fill-current"
-                  >
-                    {/* Ícone LinkedIn */}
-                  </svg>
+                  ></svg>
                 </a>
                 <a
                   aria-label="Instagram link"
                   href="https://www.instagram.com/galatasservicos"
                   className="px-3 text-white hover:text-gray-300"
                 >
+                  {/* Ícone Instagram */}
                   <svg
                     width="22"
                     height="22"
@@ -71,9 +70,7 @@ const Footer = () => {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                     className="fill-current"
-                  >
-                    {/* Ícone Instagram */}
-                  </svg>
+                  ></svg>
                 </a>
               </div>
             </div>
@@ -81,7 +78,7 @@ const Footer = () => {
           <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
             <div className="mb-10 w-full">
               <h4 className="mb-9 text-lg font-semibold text-white">
-                Serviços
+                {t("footer.services_title")}
               </h4>
               <ul>
                 <li>
@@ -89,7 +86,7 @@ const Footer = () => {
                     href="/#"
                     className="mb-3 inline-block text-base text-white hover:text-gray-300"
                   >
-                    Transporte de Cargas
+                    {t("footer.service_transport")}
                   </a>
                 </li>
                 <li>
@@ -97,7 +94,7 @@ const Footer = () => {
                     href="/#"
                     className="mb-3 inline-block text-base text-white hover:text-gray-300"
                   >
-                    Movimentação Portuária
+                    {t("footer.service_port")}
                   </a>
                 </li>
                 <li>
@@ -105,7 +102,7 @@ const Footer = () => {
                     href="/#"
                     className="mb-3 inline-block text-base text-white hover:text-gray-300"
                   >
-                    Consultoria Logística
+                    {t("footer.service_consulting")}
                   </a>
                 </li>
                 <li>
@@ -113,7 +110,7 @@ const Footer = () => {
                     href="/#"
                     className="mb-3 inline-block text-base text-white hover:text-gray-300"
                   >
-                    Serviços Terrestres e Marítimos
+                    {t("footer.service_land_marine")}
                   </a>
                 </li>
               </ul>
@@ -122,7 +119,7 @@ const Footer = () => {
           <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-2/12">
             <div className="mb-10 w-full">
               <h4 className="mb-9 text-lg font-semibold text-white">
-                Empresa
+                {t("footer.company_title")}
               </h4>
               <ul>
                 <li>
@@ -130,7 +127,7 @@ const Footer = () => {
                     href="/#about"
                     className="mb-3 inline-block text-base text-white hover:text-gray-300"
                   >
-                    Sobre Nós
+                    {t("footer.about")}
                   </a>
                 </li>
                 <li>
@@ -138,7 +135,7 @@ const Footer = () => {
                     href="/#contact"
                     className="mb-3 inline-block text-base text-white hover:text-gray-300"
                   >
-                    Contato
+                    {t("footer.contact")}
                   </a>
                 </li>
                 <li>
@@ -146,7 +143,7 @@ const Footer = () => {
                     href="/#clients"
                     className="mb-3 inline-block text-base text-white hover:text-gray-300"
                   >
-                    Clientes
+                    {t("footer.clients")}
                   </a>
                 </li>
                 <li>
@@ -154,7 +151,7 @@ const Footer = () => {
                     href="/#careers"
                     className="mb-3 inline-block text-base text-white hover:text-gray-300"
                   >
-                    Trabalhe Conosco
+                    {t("footer.careers")}
                   </a>
                 </li>
               </ul>
@@ -163,7 +160,7 @@ const Footer = () => {
           <div className="w-full px-4 md:w-2/3 lg:w-6/12 xl:w-3/12">
             <div className="mb-10 w-full">
               <h4 className="mb-9 text-lg font-semibold text-white">
-                Contato
+                {t("footer.contact_title")}
               </h4>
               <ul>
                 <li>
@@ -183,7 +180,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li className="text-base text-white">
-                  Endereço: Porto de Vitória, ES, Brasil
+                  {t("footer.address")}
                 </li>
               </ul>
             </div>
@@ -196,16 +193,16 @@ const Footer = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 md:w-2/3 lg:w-1/2">
               <p className="text-center text-base text-white md:text-left">
-                © 2025 Gálatas Serviços. Todos os direitos reservados.
+                {t("footer.copyright")}
               </p>
             </div>
             <div className="w-full px-4 md:w-1/3 lg:w-1/2">
               <div className="my-1 flex justify-center md:justify-end">
                 <p className="text-base text-white">
-                  Desenvolvido por{" "}
+                  {t("footer.developed_by")}{" "}
                   <a
                     href="https://www.linkedin.com/in/gustavo-jose-rosa-2aa375210/"
-                    rel="nofollow noopner noreferrer"
+                    rel="nofollow noopener noreferrer"
                     target="_blank"
                     className="text-gray-300 hover:underline"
                   >

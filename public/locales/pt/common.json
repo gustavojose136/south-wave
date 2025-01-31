@@ -1,0 +1,45 @@
+{
+  "welcome": "Bem-vindo",
+  "hero": {
+    "title": "South Waves Serviços Marítimos e Terrestres",
+    "description": "A South Waves entrega uma variedade de serviços: transporte de cargas, movimentação portuária, serviços terrestres e marítimos, além de consultoria logística. Atuamos no Porto de Vitória e Vila Velha há 29 anos, sempre garantindo excelência e compromisso!",
+    "slogan": "Suprindo Sua Frota, Navegando Juntos!",
+    "subtitle": "Equipamentos e soluções industriais para cada etapa da sua operação",
+    "cta": "Saiba Mais",
+    "contato": "Contato",	
+    "verProdutos": "Ver Produtos"
+  },
+  "features": {
+    "subtitle": "Nossos Serviços",
+    "title": "O que a South Waves Serviços oferece",
+    "paragraph": "Com mais de 29 anos de experiência, entregamos soluções logísticas marítimas e terrestres, sempre priorizando eficiência, segurança e qualidade."
+  },
+  "about": {
+    "title": "Excelência em Serviços Portuários e Operacionais",
+    "description": "Com anos de experiência, a South Waves é referência na prestação de serviços especializados para o setor portuário e industrial. Nosso compromisso é garantir qualidade, segurança e eficiência em todas as operações realizadas.\n\nContamos com uma equipe qualificada e soluções personalizadas para atender às necessidades de nossos clientes, desde limpeza industrial até suporte em operações logísticas.",
+    "cta": "Saiba Mais",
+    "image_alt_main": "Sobre a South Waves",
+    "image_alt_team": "Equipe da South Waves",
+    "experience_years": "25+",
+    "experience_title": "Anos de Experiência",
+    "experience_description": "Em Serviços Portuários e Logísticos"
+  },
+  "footer": {
+    "logo_alt": "South Waves Serviços",
+    "description": "South Waves Serviços Marítimos e Terrestres, excelência em transporte de cargas, movimentação portuária, serviços terrestres e marítimos. Com 29 anos de história no Porto de Vitória e Vila Velha.",
+    "services_title": "Serviços",
+    "service_transport": "Transporte de Cargas",
+    "service_port": "Movimentação Portuária",
+    "service_consulting": "Consultoria Logística",
+    "service_land_marine": "Serviços Terrestres e Marítimos",
+    "company_title": "Empresa",
+    "about": "Sobre Nós",
+    "contact": "Contato",
+    "clients": "Clientes",
+    "careers": "Trabalhe Conosco",
+    "contact_title": "Contato",
+    "address": "Endereço: Porto de Vitória, ES, Brasil",
+    "copyright": "© 2025 South Waves. Todos os direitos reservados.",
+    "developed_by": "Desenvolvido por"
+  }
+}

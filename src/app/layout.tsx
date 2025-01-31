@@ -10,6 +10,8 @@ import "../styles/prism-vsc-dark-plus.css";
 import ToasterContext from "./api/contex/ToasetContex";
 import { useEffect, useState } from "react";
 import PreLoader from "@/components/Common/PreLoader";
+import { I18nextProvider } from "react-i18next";
+import i18n from "@/i18n"; // Certifique-se de que o arquivo i18n.ts está configurado corretamente
 
 export default function RootLayout({
   children,
@@ -24,10 +26,6 @@ export default function RootLayout({
 
   return (
     <html suppressHydrationWarning={true} className="!scroll-smooth" lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
       <head />
 
       <body>
@@ -41,10 +39,12 @@ export default function RootLayout({
               defaultTheme="light"
             >
               <ToasterContext />
-              <Header />
-              {children}
-              <Footer />
-              <ScrollToTop />
+              <I18nextProvider i18n={i18n}>
+                <Header />
+                {children}
+                <Footer />
+                <ScrollToTop />
+              </I18nextProvider>
             </ThemeProvider>
           </SessionProvider>
         )}
