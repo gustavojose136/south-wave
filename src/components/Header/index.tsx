@@ -52,7 +52,7 @@ const Header = () => {
   // Classes para exibir gradiente + fixo quando sticky
   const stickyClasses = sticky
     ? "fixed z-[999] w-full border-b border-[rgb(25,37,74)] bg-gradient-to-r from-[#19254a] to-[#304774] backdrop-blur-md shadow-md dark:border-dark-3/20 dark:bg-dark/80"
-    : "absolute bg-transparent";
+    : "absolute bg-transparent w-full";
 
   return (
     <header
@@ -160,7 +160,12 @@ const Header = () => {
                   rounded
                   border-[.5px]
                   border-body-color/50
-                  bg-white
+                  
+                  ${
+                    sticky 
+                    ? "bg-[rgb(25,37,74)]"
+                    : "bg-white"
+                  }
                   px-6
                   py-4
                   duration-300
@@ -204,7 +209,7 @@ const Header = () => {
                             transition-colors
                             hover:text-primary
                             dark:text-white
-                            dark:hover:text-primary
+                            dark:hover:texta-primary
                             lg:inline-flex
                             lg:px-0
                             lg:py-6

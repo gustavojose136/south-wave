@@ -21,7 +21,7 @@ const About = () => {
       }}
     >
       {/* Camada de sobreposição para escurecer o fundo */}
-      <div className="absolute inset-0 bg-blue-950 bg-opacity-75"></div>
+      <div className="absolute inset-0 bg-blue-950 bg-opacity-50"></div>
 
       <div className="container relative z-10">
         <div className="wow fadeInUp" data-wow-delay=".2s">
@@ -50,8 +50,8 @@ const About = () => {
                 <div className="w-full px-2 sm:w-1/2 sm:px-4 lg:px-2 xl:px-4">
                   <div className="relative mb-4 sm:mb-8 sm:h-[400px] md:h-[540px] lg:h-[400px] xl:h-[500px]">
                     <Image
-                      src="/images/Galatas-maritimo-Circular-.png"
-                      alt="Sobre a Galata"
+                      src="/images/imagemFundo.jpeg"
+                      alt=""
                       fill
                       className="object-cover"
                     />

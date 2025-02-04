@@ -63,7 +63,7 @@ const Features = () => {
           {featuresData.map((feature, i) => (
             <div
               key={feature.id}
-              className="w-full px-4 md:w-1/2 lg:w-1/4 flex"
+              className="w-full px-4 md:w-1/2 lg:w-1/4 flex p-6"
             >
               <SingleFeature feature={feature} index={i} />
             </div>

@@ -12,6 +12,7 @@ import { useEffect, useState } from "react";
 import PreLoader from "@/components/Common/PreLoader";
 import { I18nextProvider } from "react-i18next";
 import i18n from "@/i18n"; // Certifique-se de que o arquivo i18n.ts está configurado corretamente
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function RootLayout({
   children,
@@ -44,6 +45,7 @@ export default function RootLayout({
                 {children}
                 <Footer />
                 <ScrollToTop />
+                <WhatsAppButton /> 
               </I18nextProvider>
             </ThemeProvider>
           </SessionProvider>
