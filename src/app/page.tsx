@@ -1,36 +1,31 @@
+import Hero from "@/components/Hero";
 import About from "@/components/About";
-import HomeBlogSection from "@/components/Blog/HomeBlogSection";
-import CallToAction from "@/components/CallToAction";
-import Clients from "@/components/Clients";
-import ScrollUp from "@/components/Common/ScrollUp";
+import Products from "@/components/Products";
+import WhyChooseUs from "@/components/WhyChooseUs";
 import Contact from "@/components/Contact";
 import Faq from "@/components/Faq";
-import Features from "@/components/Features";
-import Hero from "@/components/Hero";
-import Pricing from "@/components/Pricing";
-import Team from "@/components/Team";
-import Testimonials from "@/components/Testimonials";
-import { getAllPosts } from "@/utils/markdown";
+import ScrollUp from "@/components/Common/ScrollUp";
 import { Metadata } from "next";
+import Services from "@/components/Services";
 
 export const metadata: Metadata = {
-  title: "South Waves.,",
-  description: "dasdsa",
+  title: "South Waves - Since 1999",
+  description: "Suprimentos marítimos, logística e qualidade em primeiro lugar.",
 };
 
 export default function Home() {
-  // const posts = getAllPosts(["title", "date", "excerpt", "coverImage", "slug"]);
-
   return (
     <main>
       <ScrollUp />
       <Hero />
-      <About />
-      <Features />
+      <About /> 
       {/* <CallToAction /> */}
       {/* <Clients /> */}
       {/* <Pricing /> */}
       {/* <Testimonials /> */}
+      <Services />
+      <Products />
+      <WhyChooseUs />
       <Faq />
       {/* <Team /> */}
       {/* <HomeBlogSection posts={posts} /> */}
