@@ -188,7 +188,7 @@ const Header = () => {
                             submenuItem.action ? (
                               <button
                                 key={i}
-                                onClick={() => handleLanguageChange(submenuItem.action)}
+                                onClick={() => handleLanguageChange(submenuItem.action ?? "")}
                                 className="
                                   block
                                   w-full

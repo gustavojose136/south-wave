@@ -195,7 +195,7 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          Desde 1999 - <span className="text-[#00A3FF] italic">"You name it, we take it!"</span>
+          Desde 1999 - <span className="text-[#00A3FF] italic">You name it, we take it!</span>
         </motion.h2>
 
         <motion.div
@@ -333,4 +333,3 @@ export default function Hero() {
   )
 }
 
-  

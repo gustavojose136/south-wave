@@ -160,7 +160,7 @@ const Products = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            <span className="italic font-medium">"You name it, we take it."</span> Confira abaixo alguns dos principais itens
+            <span className="italic font-medium">You name it, we take it.</span> Confira abaixo alguns dos principais itens
             que fornecemos para embarcações e operações portuárias.
           </motion.p>
         </motion.div>

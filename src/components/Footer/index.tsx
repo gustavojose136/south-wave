@@ -50,7 +50,7 @@ const Footer = () => {
                   <Ship className="w-6 h-6 text-white" />
                 </div>
                 <span className="text-xl font-bold text-white">
-                  Sea <span className="text-[#00A3FF]">Star</span>
+                  South <span className="text-[#00A3FF]">Waves</span>
                 </span>
               </Link>
 

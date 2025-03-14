@@ -550,7 +550,7 @@ export default function Services() {
                   <div className="md:w-1/2">
                     <h2 className="text-2xl font-bold mb-6 flex items-center">
                       <span className="bg-[#00A3FF] w-1 h-8 mr-3 rounded-full"></span>
-                      Por que escolher a <span className="text-[#00A3FF] ml-2">Sea Star</span> para seus serviços
+                      Por que escolher a <span className="text-[#00A3FF] ml-2">South Waves</span> para seus serviços
                       marítimos?
                     </h2>
 

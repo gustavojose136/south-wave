@@ -302,8 +302,8 @@ const WhyChooseUs = () => {
           </div>
           <h3 className="text-xl font-bold text-[#8ab6d6] mb-3">Certificação de Excelência</h3>
           <p className="text-gray-100 italic">
-            "A South Waves tem sido nossa parceira confiável por mais de 10 anos. Seu compromisso com a qualidade e a
-            pontualidade é incomparável no setor marítimo."
+            A South Waves tem sido nossa parceira confiável por mais de 10 anos. Seu compromisso com a qualidade e a
+            pontualidade é incomparável no setor marítimo.
           </p>
           <div className="mt-4 text-sm text-gray-300">— Capitão Roberto Silva, Diretor de Operações Marítimas</div>
         </motion.div>
