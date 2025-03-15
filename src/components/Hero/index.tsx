@@ -47,7 +47,7 @@ export default function Hero() {
       </div>
 
       {/* CONTEÚDO CENTRAL */}
-      <div className="relative z-10 max-w-[800px] text-center px-4 mt-20 md:mt-0">
+      <div className="relative z-10 max-w-[800px] text-center px-4 mt-20 md:mt-0 mb-20 md:mb-0">
         <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
           <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-[#0D6EFD]/20 text-[#0D6EFD] font-medium mb-4 border border-[#0D6EFD]/30">
             <Ship className="w-4 h-4 mr-2" />
