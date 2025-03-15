@@ -18,7 +18,8 @@ const benefits = [
   {
     id: 2,
     title: "Crédito & Cash Carry",
-    content: "Possibilidade de crédito para bons históricos, além de opções cash & carry para facilitar sua operação.",
+    content:
+      "Possibilidade de crédito para bons históricos, além de opções cash & carry para facilitar sua operação.",
     icon: <CreditCard className="w-10 h-10" />,
     color: "from-indigo-400 to-purple-300",
   },
@@ -59,7 +60,7 @@ const WhyChooseUs = () => {
       ref={containerRef}
       className="relative py-24 bg-gradient-to-b from-[#101645] to-[#0b0e2a] text-white"
     >
-      {/* Elementos decorativos simplificados para mobile */}
+      {/* Elementos decorativos para desktop */}
       {!isMobile && (
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -left-40 top-20 text-[#8ab6d6] opacity-5">
@@ -83,7 +84,7 @@ const WhyChooseUs = () => {
 
         {/* ESTATÍSTICAS IMPRESSIONANTES */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-          {stats.map((stat, index) => (
+          {stats.map((stat) => (
             <div
               key={stat.id}
               className="bg-[#131a5e]/50 backdrop-blur-sm border border-[#8ab6d6]/20 rounded-lg p-6 text-center"
@@ -107,34 +108,34 @@ const WhyChooseUs = () => {
             <motion.div
               key={benefit.id}
               className="relative group"
-              initial={isMobile ? {} : { opacity: 0, y: 20 }}
-              animate={isMobile ? {} : isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.5, delay: isMobile ? 0 : index * 0.1 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <div
                 className="
-                relative 
-                p-8 
-                bg-gradient-to-b from-[#131a5e]/80 to-[#0b0e2a]/90
-                backdrop-blur-sm
-                border border-[#8ab6d6]/20
-                rounded-xl 
-                shadow-xl
-                overflow-hidden
-                z-10
-              "
+                  relative 
+                  p-8 
+                  bg-gradient-to-b from-[#131a5e]/80 to-[#0b0e2a]/90
+                  backdrop-blur-sm
+                  border border-[#8ab6d6]/20
+                  rounded-xl 
+                  shadow-xl
+                  overflow-hidden
+                  z-10
+                "
               >
                 {/* Círculo de gradiente para o ícone */}
                 <div
                   className={`
-                  w-16 h-16
-                  rounded-full
-                  bg-gradient-to-br ${benefit.color}
-                  flex items-center justify-center
-                  mb-4
-                  text-[#101645]
-                  shadow-lg
-                `}
+                    w-16 h-16
+                    rounded-full
+                    bg-gradient-to-br ${benefit.color}
+                    flex items-center justify-center
+                    mb-4
+                    text-[#101645]
+                    shadow-lg
+                  `}
                 >
                   {benefit.icon}
                 </div>
@@ -156,7 +157,9 @@ const WhyChooseUs = () => {
             A South Waves tem sido nossa parceira confiável por mais de 10 anos. Seu compromisso com a qualidade e a
             pontualidade é incomparável no setor marítimo.
           </p>
-          <div className="mt-4 text-sm text-gray-300">— Capitão Roberto Silva, Diretor de Operações Marítimas</div>
+          <div className="mt-4 text-sm text-gray-300">
+            — Capitão Roberto Silva, Diretor de Operações Marítimas
+          </div>
         </div>
 
         {/* CTA */}
@@ -188,4 +191,3 @@ const WhyChooseUs = () => {
 }
 
 export default WhyChooseUs
-

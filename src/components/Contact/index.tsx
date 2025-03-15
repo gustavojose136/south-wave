@@ -61,13 +61,17 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="bg-[#00A3FF]/10 p-3 rounded-lg">
-                    <Mail className="text-[#00A3FF] h-6 w-6" />
+                  <div className="rounded-lg bg-[#00A3FF]/10 p-3">
+                    <Mail className="h-6 w-6 text-[#00A3FF]" />
                   </div>
-                  <div>
-                    <h4 className="text-white font-medium mb-1">Email</h4>
-                    <p className="text-gray-300">ana@southwavesexportadora.com.br</p>
-                    <p className="text-gray-300">sales@southwavesexportadora.com.br</p>
+                  <div className="w-full min-w-0">
+                    <h4 className="mb-1 font-medium text-white">Email</h4>
+                    <p className="overflow-hidden whitespace-normal break-all text-gray-300">
+                      ana@southwavesexportadora.com.br
+                    </p>
+                    <p className="overflow-hidden whitespace-normal break-all text-gray-300">
+                      sales@southwavesexportadora.com.br
+                    </p>
                   </div>
                 </div>
 
