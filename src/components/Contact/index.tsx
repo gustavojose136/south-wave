@@ -74,11 +74,11 @@ export default function Contact() {
         </div>
 
         {/* Ship Icon */}
-        <div className="absolute top-6 left-6">
+        {/* <div className="absolute top-6 left-6">
           <div className="bg-[#00A3FF] p-3 rounded-xl">
             <Ship className="text-white h-8 w-8" />
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Right Column - Contact Form */}

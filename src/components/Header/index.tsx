@@ -58,15 +58,15 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="relative -mx-4 flex items-center justify-between">
           {/* LOGO */}
-          <div className="w-60 max-w-full px-4">
-            <Link href="/" className={`flex items-center gap-3 ${sticky ? "py-3" : "py-5"}`}>
+          <div className="w-80 max-w-full px-4">
+            <Link href="/" className={`flex items-center gap- ${sticky ? "py-4" : "py-5"}`}>
               <div
                 className={`bg-[#00A3FF] p-2 rounded-lg transition-all duration-300 ${sticky ? "shadow-md shadow-[#00A3FF]/20" : ""}`}
               >
                 <Ship className="w-6 h-6 text-white" />
               </div>
               <span className="text-xl font-bold text-white">
-                Sea <span className="text-[#00A3FF]">Star</span>
+                South <span className="text-[#00A3FF]">Waves</span>
               </span>
             </Link>
           </div>

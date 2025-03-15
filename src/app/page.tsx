@@ -23,9 +23,9 @@ export default function Home() {
       {/* <Clients /> */}
       {/* <Pricing /> */}
       {/* <Testimonials /> */}
+      <WhyChooseUs />
       <Services />
       <Products />
-      <WhyChooseUs />
       <Faq />
       {/* <Team /> */}
       {/* <HomeBlogSection posts={posts} /> */}

@@ -29,13 +29,13 @@ const menuData: Menu[] = [
     newTab: false,
     icon: "mdi:contact-mail-outline",
   },
-  {
-    id: 6,
-    title: "Loja",
-    path: "/shop",
-    newTab: false,
-    icon: "mdi:cart-outline",
-  },
+  // {
+  //   id: 6,
+  //   title: "Loja",
+  //   path: "/shop",
+  //   newTab: false,
+  //   icon: "mdi:cart-outline",
+  // },
   {
     id: 7,
     title: "Idioma / Language / 语言 [Beta]",
