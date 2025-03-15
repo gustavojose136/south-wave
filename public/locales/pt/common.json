@@ -2,12 +2,7 @@
   "welcome": "Bem-vindo",
   "hero": {
     "title": "South Waves Serviços Marítimos e Terrestres",
-    "description": "A South Waves entrega uma variedade de serviços: transporte de cargas, movimentação portuária, serviços terrestres e marítimos, além de consultoria logística. Atuamos no Porto de Vitória e Vila Velha há 29 anos, sempre garantindo excelência e compromisso!",
-    "slogan": "Suprindo Sua Frota, Navegando Juntos!",
-    "subtitle": "Equipamentos e soluções industriais para cada etapa da sua operação",
-    "cta": "Saiba Mais",
-    "contato": "Contato",	
-    "verProdutos": "Ver Produtos"
+    "description": "A South Waves entrega uma variedade de serviços: transporte de cargas, movimentação portuária, serviços terrestres e marítimos, além de consultoria logística. Atuamos no Porto de Vitória e Vila Velha há 29 anos, sempre garantindo excelência e compromisso!"
   },
   "features": {
     "subtitle": "Nossos Serviços",
@@ -26,7 +21,7 @@
   },
   "footer": {
     "logo_alt": "South Waves Serviços",
-    "description": "South Waves Serviços Marítimos e Terrestres, excelência em transporte de cargas, movimentação portuária, serviços terrestres e marítimos. Com 29 anos de história no Porto de Vitória e Vila Velha.",
+    "description": "South Waves Serviços Marítimos e Terrestres, excelência em serviços terrestres e marítimos. Com mais de 20 anos de História.",
     "services_title": "Serviços",
     "service_transport": "Transporte de Cargas",
     "service_port": "Movimentação Portuária",

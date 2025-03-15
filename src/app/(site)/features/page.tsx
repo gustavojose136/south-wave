@@ -1,6 +1,7 @@
 import About from "@/components/About";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import Features from "@/components/Features";
+import Services from "@/components/Services";
 import Team from "@/components/Team";
 import { Metadata } from "next";
 
@@ -14,7 +15,7 @@ const FeaturePage = () => {
   return (
     <main>
       {/* <Breadcrumb pageName="Pagina de servicos" /> */}
-      <Features />
+      <Services />
     </main>
   );
 };

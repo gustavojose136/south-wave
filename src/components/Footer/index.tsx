@@ -170,24 +170,7 @@ const Footer = () => {
                     {t("footer.contact", "Contato")}
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    href="/ports"
-                    className="flex items-center text-gray-300 hover:text-[#00A3FF] transition-colors duration-300 group"
-                  >
-                    <ChevronRight className="w-4 h-4 mr-2 text-[#00A3FF] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    {t("footer.clients", "Portos")}
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/faq"
-                    className="flex items-center text-gray-300 hover:text-[#00A3FF] transition-colors duration-300 group"
-                  >
-                    <ChevronRight className="w-4 h-4 mr-2 text-[#00A3FF] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    {t("footer.careers", "FAQ")}
-                  </Link>
-                </li>
+                
               </ul>
             </div>
           </div>
@@ -203,11 +186,18 @@ const Footer = () => {
               <ul className="space-y-4">
                 <li>
                   <a
-                    href="mailto:southwaves@southwaves.com"
+                    href="mailto:ana@southwavesexportadora.com.br"
                     className="flex items-start text-gray-300 hover:text-[#00A3FF] transition-colors duration-300 group"
                   >
                     <Mail className="w-5 h-5 mr-3 mt-0.5 text-[#00A3FF] flex-shrink-0" />
-                    <span>southwaves@southwaves.com</span>
+                    <span>ana@southwavesexportadora.com.br</span>
+                  </a>
+                  <a
+                    href="mailto:sales@southwavesexportadora.com.br"
+                    className="flex items-start text-gray-300 mt-3 hover:text-[#00A3FF] transition-colors duration-300 group"
+                  >
+                    <Mail className="w-5 h-5 mr-3 mt-0.5 text-[#00A3FF] flex-shrink-0" />
+                    <span>sales@southwavesexportadora.com.br</span>
                   </a>
                 </li>
                 <li>
@@ -216,13 +206,13 @@ const Footer = () => {
                     className="flex items-start text-gray-300 hover:text-[#00A3FF] transition-colors duration-300 group"
                   >
                     <Phone className="w-5 h-5 mr-3 mt-0.5 text-[#00A3FF] flex-shrink-0" />
-                    <span>+55 (13) 3500-6918</span>
+                    <span>+55 (47) 98406-4678</span>
                   </a>
                 </li>
                 <li className="flex items-start text-gray-300">
                   <MapPin className="w-5 h-5 mr-3 mt-0.5 text-[#00A3FF] flex-shrink-0" />
                   <span>
-                    {t("footer.address", "HQ - Tv. Doná Adelina, 35, Paquetá, Santos - SP, 11013-130 - Brazil")}
+                    {t("footer.address", "São Francisco do Sul - Brazil")}
                   </span>
                 </li>
               </ul>
@@ -269,7 +259,7 @@ const Footer = () => {
                 {t("footer.copyright", "© 2025 South Waves. Todos os direitos reservados.")}
               </p>
             </div>
-            <div className="flex items-center gap-6">
+            {/* <div className="flex items-center gap-6">
               <Link
                 href="/privacy"
                 className="text-gray-400 hover:text-[#00A3FF] text-sm transition-colors duration-300"
@@ -279,7 +269,7 @@ const Footer = () => {
               <Link href="/terms" className="text-gray-400 hover:text-[#00A3FF] text-sm transition-colors duration-300">
                 Termos de Uso
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
