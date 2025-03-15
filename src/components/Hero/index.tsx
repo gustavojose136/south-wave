@@ -87,7 +87,7 @@ export default function Hero() {
 
           <Link
             href="#contact"
-            className="group bg-transparent border-2 border-[#0D6EFD] text-white px-10 py-5 rounded-xl font-bold transition-all duration-300 flex items-center justify-center hover:bg-[#0D6EFD]/10"
+            className="group bg-transparent border-2 border-[#0D6EFD] text-white px-10 py-5 rounded-xl font-bold transition-all duration-300 flex items-center justify-center hover:bg-[#0D6EFD]/10 mb-20 md:mb-0"
           >
             <span className="flex items-center">
               Solicitar Cotação
