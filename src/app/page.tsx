@@ -7,6 +7,7 @@ import Faq from "@/components/Faq";
 import ScrollUp from "@/components/Common/ScrollUp";
 import { Metadata } from "next";
 import Services from "@/components/Services";
+import CulturalProducts from "@/components/CulturalProducts";
 
 export const metadata: Metadata = {
   title: "South Waves - Since 1999",
@@ -26,6 +27,7 @@ export default function Home() {
       <WhyChooseUs />
       <Services />
       <Products />
+      <CulturalProducts />
       <Faq />
       {/* <Team /> */}
       {/* <HomeBlogSection posts={posts} /> */}

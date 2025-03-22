@@ -1,307 +1,249 @@
-"use client"
+"use client";
 
-import { useState, useRef } from "react"
-import { motion } from "framer-motion"
-import Link from "next/link"
+import { useRef } from "react";
+import Image from "next/image";
 import {
+  Ship,
   Package,
-  Clipboard,
   FileText,
-  ShieldCheck,
-  Truck,
   Wrench,
   Anchor,
-  LifeBuoy,
-  ChevronRight,
+  Clock,
   CheckCircle,
-  CreditCard,
-  DollarSign,
-  Users,
-} from "lucide-react"
-import { useIsMobile } from "@/hooks/use-mobile"
+  ArrowRight,
+} from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export default function Services() {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const [activeTab, setActiveTab] = useState("supplies")
-  const isMobile = useIsMobile()
+  const containerRef = useRef<HTMLDivElement>(null);
+  const isMobile = useIsMobile();
 
-  const tabs = [
-    { id: "supplies", label: "Suprimentos", icon: <Package className="w-5 h-5" /> },
-    { id: "agency", label: "Agenciamento", icon: <FileText className="w-5 h-5" /> },
-    { id: "logistics", label: "Logística", icon: <Truck className="w-5 h-5" /> },
-    { id: "financial", label: "Financeiro", icon: <CreditCard className="w-5 h-5" /> },
-  ]
-
-  const services = {
-    supplies: [
-      {
-        title: "Provisões de Bordo",
-        description:
-          "Alimentos, bebidas e suprimentos essenciais para a tripulação e passageiros, com opções para diferentes requisitos dietéticos e culturais.",
-        icon: <Package />,
-        image: "/placeholder.svg?height=400&width=600",
-      },
-      {
-        title: "Equipamentos de Segurança",
-        description:
-          "Coletes salva-vidas, botes, extintores de incêndio e outros equipamentos de segurança em conformidade com as regulamentações internacionais.",
-        icon: <ShieldCheck />,
-        image: "/placeholder.svg?height=400&width=600",
-      },
-      {
-        title: "Peças e Componentes",
-        description:
-          "Peças de reposição para motores, sistemas elétricos, hidráulicos e outros componentes essenciais para o funcionamento da embarcação.",
-        icon: <Wrench />,
-        image: "/placeholder.svg?height=400&width=600",
-      },
-      {
-        title: "Materiais de Limpeza",
-        description:
-          "Produtos de limpeza especializados para ambientes marítimos, incluindo opções biodegradáveis e ecologicamente responsáveis.",
-        icon: <LifeBuoy />,
-        image: "/placeholder.svg?height=400&width=600",
-      },
-    ],
-    agency: [
-      {
-        title: "Customs Clearance",
-        description:
-          "Assistência completa com processos de importação e exportação, garantindo conformidade com as regulamentações brasileiras.",
-        icon: <Clipboard />,
-        image: "/placeholder.svg?height=400&width=600",
-      },
-      {
-        title: "Crew Change",
-        description: "Suporte para troca de tripulação, incluindo transporte, hospedagem e documentação necessária.",
-        icon: <Users />,
-        image: "/placeholder.svg?height=400&width=600",
-      },
-      {
-        title: "Documentação de Carga",
-        description:
-          "Preparação e processamento de conhecimentos de embarque, manifestos de carga e outros documentos essenciais.",
-        icon: <FileText />,
-        image: "/placeholder.svg?height=400&width=600",
-      },
-      {
-        title: "Certificações e Licenças",
-        description:
-          "Suporte para obtenção e renovação de certificações e licenças necessárias para operação em águas brasileiras.",
-        icon: <ShieldCheck />,
-        image: "/placeholder.svg?height=400&width=600",
-      },
-    ],
-    logistics: [
-      {
-        title: "Transporte Refrigerado",
-        description:
-          "Caminhões e depósitos implementados com câmara frigorífica, garantindo a climatização ideal para cada item.",
-        icon: <Truck />,
-        image: "/placeholder.svg?height=400&width=600",
-      },
-      {
-        title: "Armazenamento",
-        description:
-          "Instalações de armazenamento seguras e climatizadas para diferentes tipos de carga, incluindo itens perecíveis e perigosos.",
-        icon: <Package />,
-        image: "/placeholder.svg?height=400&width=600",
-      },
-      {
-        title: "Rastreamento de Remessas",
-        description:
-          "Sistemas avançados de rastreamento para monitorar o status e a localização de suas remessas em tempo real.",
-        icon: <Anchor />,
-        image: "/placeholder.svg?height=400&width=600",
-      },
-      {
-        title: "Entrega Expressa",
-        description:
-          "Opções de entrega urgente para situações críticas, garantindo que suprimentos essenciais cheguem rapidamente.",
-        icon: <Truck />,
-        image: "/placeholder.svg?height=400&width=600",
-      },
-    ],
-    financial: [
-      {
-        title: "Descontos Atrativos",
-        description:
-          "Grandes pedidos significam grandes economias. Oferecemos condições especiais para clientes de longo prazo.",
-        icon: <DollarSign />,
-        image: "/placeholder.svg?height=400&width=600",
-      },
-      {
-        title: "Crédito Flexível",
-        description: "Possibilidade de crédito com prazos de 30-60-45 dias para clientes com bom histórico.",
-        icon: <CreditCard />,
-        image: "/placeholder.svg?height=400&width=600",
-      },
-      {
-        title: "Opções de Pagamento",
-        description:
-          "Aceitamos diversas formas de pagamento, incluindo cartão de crédito, para facilitar suas operações.",
-        icon: <CreditCard />,
-        image: "/placeholder.svg?height=400&width=600",
-      },
-      {
-        title: "Cash & Carry",
-        description: "Opções de pagamento à vista com descontos especiais para agilizar suas operações.",
-        icon: <DollarSign />,
-        image: "/placeholder.svg?height=400&width=600",
-      },
-    ],
-  }
+  // Serviços oferecidos
+  const services = [
+    {
+      icon: <Package className="h-12 w-12 text-[#0D6EFD]" />,
+      title: "Fornecimento de Peças Originais",
+      description:
+        "Fornecemos peças originais e homologadas para todos os tipos de embarcações, garantindo a autenticidade e qualidade dos componentes.",
+      features: [
+        "Peças com certificação de origem",
+        "Garantia do fabricante",
+        "Rastreabilidade completa",
+      ],
+      image: "/images/servicos/pecas-origi.jpg",
+    },
+    {
+      icon: <Clock className="h-12 w-12 text-[#0D6EFD]" />,
+      title: "Entrega Expressa",
+      description:
+        "Serviço de entrega expressa para peças urgentes em qualquer porto do Brasil, minimizando o tempo de inatividade da sua embarcação.",
+      features: [
+        "Entrega em 24-48h",
+        "Rastreamento em tempo real",
+        "Atendimento 24/7 para emergências",
+      ],
+      image: "/images/servicos/entrega-express.png",
+    },
+    {
+      icon: <Wrench className="h-12 w-12 text-[#0D6EFD]" />,
+      title: "Suporte Técnico Especializado",
+      description:
+        "Nossa equipe técnica oferece suporte na identificação e seleção das peças corretas para sua embarcação.",
+      features: [
+        "Consultoria técnica especializada",
+        "Identificação precisa de componentes",
+        "Recomendações de substituição",
+      ],
+      image: "/images/servicos/tec.jpg",
+    },
+    {
+      icon: <FileText className="h-12 w-12 text-[#0D6EFD]" />,
+      title: "Documentação e Certificação",
+      description:
+        "Fornecemos toda a documentação necessária para peças críticas, garantindo conformidade com regulamentações marítimas.",
+      features: [
+        "Certificados de conformidade",
+        "Documentação para classificadoras",
+        "Relatórios de testes e qualidade",
+      ],
+      image: "/images/servicos/doc.jpg",
+    },
+  ];
 
   return (
-    <div className="min-h-screen bg-[#1A2129] text-white" ref={containerRef}>
-      <section className="relative py-24 md:py-32">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1A2129] to-[#2D3339]"></div>
-          <div className="absolute inset-0 bg-[url('/placeholder.svg?height=500&width=1000')] bg-cover bg-center opacity-10"></div>
+    <section
+      id="services"
+      ref={containerRef}
+      className="relative bg-gradient-to-b from-[#0A1A2F] to-[#0F2A47] py-24 text-white"
+    >
+      {/* Elementos decorativos */}
+      {!isMobile && (
+        <>
+          <div className="absolute right-0 top-0 text-[#0D6EFD] opacity-5">
+            <Ship className="h-96 w-96" />
+          </div>
+          <div className="absolute bottom-0 left-0 text-[#0D6EFD] opacity-5">
+            <Anchor className="h-80 w-80" />
+          </div>
+        </>
+      )}
+
+      <div className="container relative z-10 mx-auto px-4">
+        {/* Cabeçalho da seção */}
+        <div className="mb-16 px-4 text-center">
+          <div className="mb-4 inline-flex items-center justify-center rounded-full border border-[#0D6EFD]/30 bg-[#0D6EFD]/20 px-4 py-2 font-medium text-[#0D6EFD]">
+            <Wrench className="mr-2 h-4 w-4" />
+            Nossos Serviços
+          </div>
+
+          <h2 className="mb-6 text-3xl font-bold md:text-5xl">
+            Soluções Completas para
+            <span className="ml-2 text-[#0D6EFD]">Reposição Naval</span>
+          </h2>
+
+          <p className="mx-auto max-w-3xl text-base text-gray-300 md:text-lg">
+            Oferecemos serviços especializados para garantir que sua embarcação
+            receba as peças certas no momento certo, minimizando o tempo de
+            inatividade.
+          </p>
         </div>
 
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-              <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-gradient-to-r from-[#00A3FF]/20 to-transparent text-[#00A3FF] font-medium mb-4 border border-[#00A3FF]/20 backdrop-blur-sm">
-                Nossos Serviços
+        {/* Grid de serviços - SEM ANIMAÇÕES */}
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="group overflow-hidden rounded-xl border border-[#0D6EFD]/20 bg-[#0F2A47] transition-all duration-300 hover:border-[#0D6EFD]/50"
+            >
+              {/* Imagem na parte superior para mobile e desktop */}
+              <div className="relative h-48 w-full overflow-visible">
+                <Image
+                  src={service.image || "/placeholder.svg?height=300&width=400"}
+                  alt={service.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A1A2F]/90 to-transparent"></div>
+
+                {/* Badge de serviço premium */}
+                <div className="absolute right-4 top-4 rounded-full bg-[#0D6EFD] px-3 py-1 text-xs font-bold text-white">
+                  Serviço Premium
+                </div>
+
+                {/* Ícone do serviço */}
+                <div className="absolute bottom-0 left-1/2 z-50 -translate-x-1/2 translate-y-1/2 transform">
+                  <div className="rounded-full border-4 border-[#0F2A47] bg-[#0D6EFD] p-3 shadow-lg">
+                    {service.title.includes("Peças") && (
+                      <Package className="h-8 w-8 text-white" />
+                    )}
+                    {service.title.includes("Entrega") && (
+                      <Clock className="h-8 w-8 text-white" />
+                    )}
+                    {service.title.includes("Suporte") && (
+                      <Wrench className="h-8 w-8 text-white" />
+                    )}
+                    {service.title.includes("Documentação") && (
+                      <FileText className="h-8 w-8 text-white" />
+                    )}
+                  </div>
+                </div>
               </div>
 
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                Soluções{" "}
-                <span className="relative">
-                  <span className="relative z-10 text-[#00A3FF]">Marítimas</span>
-                  <span className="absolute -bottom-2 left-0 right-0 h-3 bg-[#00A3FF]/20 rounded-full -z-0"></span>
-                </span>{" "}
-                Completas
-              </h1>
+              {/* Conteúdo do serviço */}
+              <div className="p-6 pt-10">
+                <h3 className="mb-4 text-center text-xl font-bold text-white">
+                  {service.title}
+                </h3>
+                <p className="mb-6 text-center text-gray-300">
+                  {service.description}
+                </p>
 
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Nossa equipe está pronta para atender da melhor forma e agilizar a entrega no fornecimento.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      <section id="services-tabs" className="py-20 bg-[#1A2129] relative">
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00A3FF] via-transparent to-[#00A3FF] opacity-30"></div>
-
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center mb-16">
-            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Nossos{" "}
-                <span className="relative">
-                  <span className="relative z-10 text-[#00A3FF]">Serviços</span>
-                  <span className="absolute -bottom-2 left-0 right-0 h-3 bg-[#00A3FF]/20 rounded-full -z-0"></span>
-                </span>
-              </h2>
-
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Escolha a categoria de serviço que você precisa e descubra como podemos ajudar sua operação marítima.
-              </p>
-            </motion.div>
-          </div>
-
-          <div className="max-w-5xl mx-auto">
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {tabs.map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`
-                    relative overflow-hidden flex items-center gap-2 px-8 py-4 rounded-xl font-medium transition-all duration-300
-                    ${
-                      activeTab === tab.id
-                        ? "bg-gradient-to-r from-[#00A3FF] to-[#0088D1] text-white shadow-lg shadow-[#00A3FF]/20"
-                        : "bg-[#2D3339] text-gray-300 hover:bg-[#2D3339]/80 border border-[#00A3FF]/10"
-                    }
-                  `}
-                >
-                  <span className="relative z-10 flex items-center">
-                    {tab.icon}
-                    <span className="ml-2">{tab.label}</span>
-                  </span>
-                </button>
-              ))}
-            </div>
-
-            <div className="relative">
-              <div className="bg-gradient-to-br from-[#2D3339]/90 to-[#1A2129]/90 p-8 rounded-2xl border border-[#00A3FF]/20 shadow-2xl backdrop-blur-sm relative z-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  {services[activeTab as keyof typeof services].map((service, index) => (
-                    <div key={index} className="group relative overflow-hidden">
-                      <div className="relative bg-gradient-to-br from-[#1A2129]/80 to-[#2D3339] p-6 rounded-xl border border-[#00A3FF]/10 hover:border-[#00A3FF]/30 transition-all duration-300 h-full">
-                        <div className="absolute -right-3 -top-3 bg-gradient-to-r from-[#00A3FF] to-[#0088D1] p-3 rounded-xl shadow-lg shadow-[#00A3FF]/20 z-10">
-                          {service.icon}
-                        </div>
-
-                        <h3 className="text-xl font-bold mb-3 group-hover:text-[#00A3FF] transition-colors duration-300">
-                          {service.title}
-                        </h3>
-
-                        <p className="text-gray-300 mb-4">{service.description}</p>
-                      </div>
-                    </div>
+                <ul className="space-y-3">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start gap-2">
+                      <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#0D6EFD]" />
+                      <span className="text-gray-200">{feature}</span>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             </div>
-          </div>
+          ))}
+        </div>
 
-          <div className="max-w-5xl mx-auto mt-16">
-            <div className="relative">
-              <div className="bg-gradient-to-r from-[#2D3339]/90 to-[#1A2129]/90 p-8 rounded-2xl border border-[#00A3FF]/30 backdrop-blur-sm relative z-10">
-                <div className="flex flex-col md:flex-row gap-8">
-                  <div className="md:w-1/2">
-                    <h2 className="text-2xl font-bold mb-6 flex items-center">
-                      <span className="bg-[#00A3FF] w-1 h-8 mr-3 rounded-full"></span>
-                      Por que escolher a <span className="text-[#00A3FF] ml-2">South Waves</span>?
-                    </h2>
+        {/* Seção de emergência - SEM ANIMAÇÕES */}
+        <div className="mt-16 overflow-hidden rounded-xl border border-[#0D6EFD]/30 bg-gradient-to-r from-[#0D6EFD]/20 to-[#0F2A47]">
+          {/* Imagem de fundo para desktop e mobile */}
+          <div className="relative w-full">
+            <div className="absolute inset-0 z-0">
+              <Image
+                src="/images/servicos/emergencia.jpg"
+                alt="Serviço de emergência"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0A1A2F]/90 to-[#0A1A2F]/70"></div>
+            </div>
 
-                    <p className="text-gray-300 mb-6">
-                      Para qualquer necessidade adicional, entre em contato. Somos flexíveis e prontos para oferecer
-                      soluções sob medida para sua embarcação.
-                    </p>
+            <div className="relative z-10 p-8">
+              <div className="flex flex-col items-center text-center md:items-start md:text-left">
+                <div className="mb-6 inline-flex items-center justify-center rounded-full bg-[#0D6EFD] px-4 py-2 font-medium text-white">
+                  <Clock className="mr-2 h-4 w-4" />
+                  Atendimento 24/7
+                </div>
 
-                    <Link
-                      href="/contact"
-                      className="inline-flex items-center bg-gradient-to-r from-[#00A3FF] to-[#0088D1] text-white px-8 py-3 rounded-xl font-medium transition-all duration-300 hover:shadow-lg hover:shadow-[#00A3FF]/20"
-                    >
-                      <span className="flex items-center">
-                        Solicitar Cotação
-                        <ChevronRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
-                      </span>
-                    </Link>
+                <h3 className="mb-4 text-2xl font-bold text-white md:text-3xl">
+                  Serviço de Emergência para Reposição de Peças Críticas
+                </h3>
+
+                <p className="mb-6 max-w-2xl text-gray-300">
+                  Entendemos que o tempo de inatividade de uma embarcação
+                  representa custos significativos. Por isso, oferecemos um
+                  serviço de emergência 24/7 para fornecimento e entrega de
+                  peças críticas em qualquer porto do Brasil.
+                </p>
+
+                <div className="mb-6 grid w-full max-w-2xl grid-cols-1 gap-4 sm:grid-cols-2">
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#0D6EFD]" />
+                    <span className="text-gray-200">
+                      Identificação rápida de peças críticas
+                    </span>
                   </div>
-
-                  <div className="md:w-1/2">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      {[
-                        "Atendimento 24/7 para emergências",
-                        "Equipe técnica altamente qualificada",
-                        "Preços competitivos e transparentes",
-                        "Presença em todos os principais portos",
-                        "Soluções personalizadas para cada cliente",
-                        "Mais de 25 anos de experiência no setor",
-                      ].map((item, i) => (
-                        <div key={i} className="flex items-start gap-3 group">
-                          <div className="bg-[#00A3FF]/20 p-2 rounded-lg group-hover:bg-[#00A3FF]/30 transition-all duration-300">
-                            <CheckCircle className="w-5 h-5 text-[#00A3FF]" />
-                          </div>
-                          <p className="text-gray-300">{item}</p>
-                        </div>
-                      ))}
-                    </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#0D6EFD]" />
+                    <span className="text-gray-200">
+                      Entrega expressa em até 24h
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#0D6EFD]" />
+                    <span className="text-gray-200">
+                      Suporte técnico especializado
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#0D6EFD]" />
+                    <span className="text-gray-200">
+                      Linha direta para emergências
+                    </span>
                   </div>
                 </div>
+
+                <a
+                  href="#contact"
+                  className="inline-flex items-center rounded-lg bg-[#0D6EFD] px-6 py-3 font-medium text-white transition-all duration-300 hover:bg-[#0747A6]"
+                >
+                  <span className="flex items-center">
+                    Contato de Emergência
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </span>
+                </a>
               </div>
             </div>
           </div>
         </div>
-      </section>
-    </div>
-  )
+      </div>
+    </section>
+  );
 }
-
