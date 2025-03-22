@@ -67,7 +67,7 @@ const CulturalProducts = () => {
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Hero Section */}
-        <div className="flex flex-col lg:flex-row items-center gap-12 mb-20">
+        <div className="flex flex-col lg:flex-row items-center gap-8 mb-16">
           {/* Left: Content */}
           <div className="lg:w-1/2">
             <motion.div
@@ -127,32 +127,35 @@ const CulturalProducts = () => {
           </div>
 
           {/* Right: Image */}
-          <div className="lg:w-1/2">
+          <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="relative"
             >
-              <div className="relative h-[400px] w-full rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative h-[300px] sm:h-[350px] md:h-[400px] w-full rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="/images/halal/carne-bovina-halal-premium.jpg"
                   alt="Carne Bovina Halal Premium"
                   fill
                   className="object-cover"
+                  priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0A1A2F] to-transparent opacity-60"></div>
 
                 {/* Badge de certificação */}
-                <div className="absolute top-6 right-6 bg-white/90 rounded-full p-3 shadow-lg">
-                  <Award className="w-12 h-12 text-[#47A5FF]" />
+                <div className="absolute top-4 right-4 sm:top-6 sm:right-6 bg-white/90 rounded-full p-2 sm:p-3 shadow-lg">
+                  <Award className="w-8 h-8 sm:w-12 sm:h-12 text-[#47A5FF]" />
                 </div>
 
                 {/* Texto sobreposto */}
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <div className="bg-[#0A1A2F]/80 backdrop-blur-sm p-6 rounded-xl border border-[#47A5FF]/20">
-                    <h3 className="text-xl font-bold text-white mb-2">Certificação Halal Garantida</h3>
-                    <p className="text-gray-300 text-sm">
+                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
+                  <div className="bg-[#0A1A2F]/80 backdrop-blur-sm p-4 sm:p-6 rounded-xl border border-[#47A5FF]/20">
+                    <h3 className="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2">
+                      Certificação Halal Garantida
+                    </h3>
+                    <p className="text-gray-300 text-xs sm:text-sm">
                       Nossa carne bovina segue rigorosamente os princípios islâmicos em todo o processo, do abate à
                       embalagem, garantindo total conformidade com as exigências Halal.
                     </p>
