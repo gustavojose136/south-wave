@@ -176,12 +176,12 @@ export default function Services() {
           {/* Imagem de fundo para desktop e mobile */}
           <div className="relative w-full">
             <div className="absolute inset-0 z-0">
-              <Image
+              {/* <Image
                 src="/images/servicos/emergencia.jpg"
                 alt="Serviço de emergência"
                 fill
                 className="object-cover"
-              />
+              /> */}
               <div className="absolute inset-0 bg-gradient-to-r from-[#0A1A2F]/90 to-[#0A1A2F]/70"></div>
             </div>
 

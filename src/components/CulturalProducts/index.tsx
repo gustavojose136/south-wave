@@ -55,7 +55,7 @@ const CulturalProducts = () => {
   const isMobile = useIsMobile()
 
   return (
-    <section id="halal-beef" className="relative py-24 overflow-hidden">
+    <section id="halal-beef" className="relative py-12 sm:py-24 overflow-hidden">
       {/* Gradiente de fundo moderno */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#0A1A2F] via-[#0D2240] to-[#0F2A47] -z-10"></div>
 
@@ -65,7 +65,7 @@ const CulturalProducts = () => {
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#47A5FF]/5 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Hero Section */}
         <div className="flex flex-col lg:flex-row items-center gap-12 mb-20">
           {/* Left: Content */}
@@ -197,7 +197,7 @@ const CulturalProducts = () => {
         </div>
 
         {/* Beef Cuts Section */}
-        <div id="beef-cuts" className="mb-20">
+        <div id="beef-cuts" className="mb-20 scroll-mt-20">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-white mb-4">Cortes Premium Disponíveis</h3>
             <p className="text-gray-300 max-w-3xl mx-auto">
@@ -206,7 +206,7 @@ const CulturalProducts = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {beefCuts.map((cut, index) => (
               <motion.div
                 key={index}
@@ -215,9 +215,9 @@ const CulturalProducts = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-[#1E2837] to-[#0F2A47] rounded-xl overflow-hidden border border-[#47A5FF]/20 group hover:border-[#47A5FF]/50 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
-                <div className="relative h-60 overflow-hidden">
+                <div className="relative h-48 sm:h-60 overflow-hidden">
                   <Image
-                    src={cut.image || "/placeholder.svg"}
+                    src={cut.image || "/placeholder.svg?height=240&width=320"}
                     alt={cut.name}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -230,13 +230,13 @@ const CulturalProducts = () => {
                   </div>
                 </div>
 
-                <div className="p-6">
-                  <h4 className="text-xl font-bold text-white mb-2">{cut.name}</h4>
-                  <p className="text-gray-300 text-sm mb-4">{cut.description}</p>
+                <div className="p-4 sm:p-6">
+                  <h4 className="text-lg sm:text-xl font-bold text-white mb-2">{cut.name}</h4>
+                  <p className="text-gray-300 text-xs sm:text-sm mb-4">{cut.description}</p>
 
                   <div className="flex justify-between items-center">
                     <span className="text-[#47A5FF] font-bold">{cut.price}</span>
-                    <button className="px-4 py-2 bg-[#47A5FF]/10 text-[#47A5FF] rounded-lg hover:bg-[#47A5FF] hover:text-white transition-colors duration-300 text-sm font-medium">
+                    <button className="px-3 py-1 sm:px-4 sm:py-2 bg-[#47A5FF]/10 text-[#47A5FF] rounded-lg hover:bg-[#47A5FF] hover:text-white transition-colors duration-300 text-sm font-medium">
                       Solicitar
                     </button>
                   </div>
