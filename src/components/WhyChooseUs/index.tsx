@@ -4,54 +4,53 @@ import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
 import { Percent, CreditCard, Users, Clock, Award, Anchor, Wallet } from "lucide-react"
 import { useIsMobile } from "@/hooks/use-mobile"
-
-// Dados dos diferenciais atualizados
-const benefits = [
-  {
-    id: 1,
-    title: "Descontos Progressivos",
-    content:
-      "Quanto maior o pedido, maior o desconto. Oferecemos condições especiais que se adaptam ao volume da sua operação.",
-    icon: <Percent className="w-10 h-10" />,
-    color: "from-blue-400 to-cyan-300",
-  },
-  {
-    id: 2,
-    title: "Múltiplas Opções de Pagamento",
-    content:
-      "Oferecemos crédito, pagamento via companhia e pagamento via cartão de crédito para facilitar suas transações.",
-    icon: <Wallet className="w-10 h-10" />,
-    color: "from-indigo-400 to-purple-300",
-  },
-  {
-    id: 3,
-    title: "Preços Flexíveis",
-    content: "Nossos preços são sempre flexíveis e adaptáveis às suas necessidades. Prices are very accommodating.",
-    icon: <CreditCard className="w-10 h-10" />,
-    color: "from-teal-400 to-emerald-300",
-  },
-  {
-    id: 4,
-    title: "Atendimento Personalizado",
-    content:
-      "Para qualquer necessidade adicional, entre em contato. Somos flexíveis e prontos para oferecer soluções sob medida.",
-    icon: <Users className="w-10 h-10" />,
-    color: "from-orange-400 to-amber-300",
-  },
-]
-
-// Dados de estatísticas
-const stats = [
-  { id: 1, value: "20+", label: "Anos de Experiência", icon: <Clock className="w-6 h-6" /> },
-  { id: 2, value: "500+", label: "Clientes Satisfeitos", icon: <Users className="w-6 h-6" /> },
-  { id: 3, value: "15+", label: "Portos Atendidos", icon: <Anchor className="w-6 h-6" /> },
-  { id: 4, value: "99%", label: "Taxa de Satisfação", icon: <Award className="w-6 h-6" /> },
-]
+import { useTranslation } from "react-i18next"
 
 const WhyChooseUs = () => {
+  const { t } = useTranslation()
   const containerRef = useRef<HTMLDivElement>(null)
   const isInView = useInView(containerRef, { once: false, amount: 0.2 })
   const isMobile = useIsMobile()
+
+  // Dados dos diferenciais com traduções
+  const benefits = [
+    {
+      id: 1,
+      title: t("whyChooseUs.benefits.progressiveDiscounts.title"),
+      content: t("whyChooseUs.benefits.progressiveDiscounts.content"),
+      icon: <Percent className="w-10 h-10" />,
+      color: "from-blue-400 to-cyan-300",
+    },
+    {
+      id: 2,
+      title: t("whyChooseUs.benefits.multiplePaymentOptions.title"),
+      content: t("whyChooseUs.benefits.multiplePaymentOptions.content"),
+      icon: <Wallet className="w-10 h-10" />,
+      color: "from-indigo-400 to-purple-300",
+    },
+    {
+      id: 3,
+      title: t("whyChooseUs.benefits.flexiblePrices.title"),
+      content: t("whyChooseUs.benefits.flexiblePrices.content"),
+      icon: <CreditCard className="w-10 h-10" />,
+      color: "from-teal-400 to-emerald-300",
+    },
+    {
+      id: 4,
+      title: t("whyChooseUs.benefits.personalizedService.title"),
+      content: t("whyChooseUs.benefits.personalizedService.content"),
+      icon: <Users className="w-10 h-10" />,
+      color: "from-orange-400 to-amber-300",
+    },
+  ]
+
+  // Dados de estatísticas com traduções
+  const stats = [
+    { id: 1, value: "20+", label: t("whyChooseUs.stats.stat1.label"), icon: <Clock className="w-6 h-6" /> },
+    { id: 2, value: "500+", label: t("whyChooseUs.stats.stat2.label"), icon: <Users className="w-6 h-6" /> },
+    { id: 3, value: "15+", label: t("whyChooseUs.stats.stat3.label"), icon: <Anchor className="w-6 h-6" /> },
+    { id: 4, value: "99%", label: t("whyChooseUs.stats.stat4.label"), icon: <Award className="w-6 h-6" /> },
+  ]
 
   return (
     <section
@@ -82,11 +81,11 @@ const WhyChooseUs = () => {
         >
           <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#8ab6d6] to-[#a8d8ff]">
-              Por que escolher a South Waves?
+              {t("whyChooseUs.title")}
             </span>
           </h2>
           <p className="text-gray-100 text-lg max-w-2xl mx-auto">
-            Entenda os diferenciais que fazem de nós a melhor escolha para o seu negócio marítimo e portuário.
+            {t("whyChooseUs.subtitle")}
           </p>
         </motion.div>
 
@@ -146,18 +145,7 @@ const WhyChooseUs = () => {
 
                 {/* Círculo de gradiente para o ícone */}
                 <div
-                  className={`
-                    w-16 h-16
-                    rounded-full
-                    bg-gradient-to-br ${benefit.color}
-                    flex items-center justify-center
-                    mb-4
-                    text-[#101645]
-                    shadow-lg
-                    group-hover:scale-110
-                    transition-transform
-                    duration-300
-                  `}
+                  className={`w-16 h-16 rounded-full bg-gradient-to-br ${benefit.color} flex items-center justify-center mb-4 text-[#101645] shadow-lg group-hover:scale-110 transition-transform duration-300`}
                 >
                   {benefit.icon}
                 </div>
@@ -181,12 +169,11 @@ const WhyChooseUs = () => {
               <Award className="w-8 h-8 text-[#8ab6d6]" />
             </div>
           </div>
-          <h3 className="text-xl font-bold text-[#8ab6d6] mb-3">Certificação de Excelência</h3>
+          <h3 className="text-xl font-bold text-[#8ab6d6] mb-3">{t("whyChooseUs.testimonial.title")}</h3>
           <p className="text-gray-100 italic">
-            WA South Waves tem sido nossa parceira confiável por mais de 10 anos. Seu compromisso com a qualidade,
-            flexibilidade de pagamentos e a pontualidade é incomparável no setor marítimo.
+            {t("whyChooseUs.testimonial.content")}
           </p>
-          <div className="mt-4 text-sm text-gray-300">— Capitão Roberto Silva, Diretor de Operações Marítimas</div>
+          <div className="mt-4 text-sm text-gray-300">{t("whyChooseUs.testimonial.author")}</div>
         </motion.div>
 
         {/* CTA */}
@@ -215,7 +202,7 @@ const WhyChooseUs = () => {
               hover:scale-105
             "
           >
-            Entre em Contato Agora
+            {t("whyChooseUs.cta")}
           </a>
         </motion.div>
       </div>
@@ -224,4 +211,3 @@ const WhyChooseUs = () => {
 }
 
 export default WhyChooseUs
-

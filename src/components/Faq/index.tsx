@@ -3,71 +3,67 @@
 import { useState, useRef } from "react"
 import { motion, AnimatePresence, useScroll, useTransform, useInView } from "framer-motion"
 import { ChevronDown, Search, HelpCircle, Anchor, Ship, Compass, MessageSquare, PlusCircle } from "lucide-react"
+import { useTranslation } from "react-i18next"
 
-// Dados das perguntas frequentes
+// Dados das perguntas frequentes (as strings foram substituídas por chaves de tradução)
 const faqData = [
   {
     id: 1,
-    question: "Há quanto tempo vocês atuam no mercado?",
-    answer:
-      "Estamos no ramo desde 1999, com mais de 20 anos de experiência em suprimentos marítimos e serviços portuários. Nossa trajetória nos permitiu construir uma rede sólida de fornecedores e parceiros, garantindo a melhor qualidade e preços competitivos para nossos clientes.",
+    question: "faq.data.1.question",
+    answer: "faq.data.1.answer",
     icon: <HelpCircle className="w-5 h-5" />,
     category: "empresa",
   },
   {
     id: 2,
-    question: "Quais benefícios de localização vocês oferecem?",
-    answer:
-      "Estamos estrategicamente em São Francisco do Sul, SC, facilitando o acesso aos portos de Paranaguá, Itajaí e Imbituba, reduzindo fretes e prazos de entrega. Nossa localização privilegiada nos permite atender com agilidade toda a costa sul e sudeste do Brasil, otimizando a logística e reduzindo custos operacionais.",
+    question: "faq.data.2.question",
+    answer: "faq.data.2.answer",
     icon: <Compass className="w-5 h-5" />,
     category: "logística",
   },
   {
     id: 3,
-    question: "Vocês oferecem condições de pagamento especiais?",
-    answer:
-      "Sim. Para clientes com bom histórico, podemos oferecer crédito e condições diferenciadas. Também trabalhamos com cash & carry. Nosso departamento financeiro está sempre disponível para discutir as melhores opções de pagamento que se adequem às necessidades específicas de cada cliente e operação.",
+    question: "faq.data.3.question",
+    answer: "faq.data.3.answer",
     icon: <MessageSquare className="w-5 h-5" />,
     category: "financeiro",
   },
   {
     id: 4,
-    question: "E se eu precisar de ajuda extra com documentação?",
-    answer:
-      "Oferecemos suporte em trâmites de alfândega, liberação de cargas e demais documentos necessários para operações portuárias. Nossa equipe especializada possui ampla experiência em processos aduaneiros e está preparada para auxiliar em todas as etapas burocráticas, garantindo conformidade e agilidade nos processos.",
+    question: "faq.data.4.question",
+    answer: "faq.data.4.answer",
     icon: <MessageSquare className="w-5 h-5" />,
     category: "documentação",
   },
   {
     id: 5,
-    question: "Quais são os principais produtos que vocês fornecem?",
-    answer:
-      "Fornecemos uma ampla gama de produtos, incluindo equipamentos de segurança, suprimentos de convés, materiais de limpeza, tintas marítimas, uniformes, equipamentos de combate a incêndio, entre outros. Nosso catálogo é constantemente atualizado para atender às demandas específicas do setor marítimo e portuário.",
+    question: "faq.data.5.question",
+    answer: "faq.data.5.answer",
     icon: <HelpCircle className="w-5 h-5" />,
     category: "produtos",
   },
   {
     id: 6,
-    question: "Vocês atendem embarcações internacionais?",
-    answer:
-      "Sim, atendemos embarcações de todas as bandeiras que aportam nos portos brasileiros. Temos experiência em lidar com requisitos específicos de diferentes países e tipos de embarcações, garantindo que todos os suprimentos estejam em conformidade com as normas internacionais de navegação.",
+    question: "faq.data.6.question",
+    answer: "faq.data.6.answer",
     icon: <Ship className="w-5 h-5" />,
     category: "serviços",
   },
 ]
 
-// Categorias para filtrar as perguntas
+// Categorias para filtrar as perguntas (as chaves serão traduzidas)
 const categories = [
-  { id: "all", name: "Todas" },
-  { id: "empresa", name: "Sobre a Empresa" },
-  { id: "logística", name: "Logística" },
-  { id: "financeiro", name: "Financeiro" },
-  { id: "documentação", name: "Documentação" },
-  { id: "produtos", name: "Produtos" },
-  { id: "serviços", name: "Serviços" },
+  { id: "all", name: "faq.categories.all" },
+  { id: "empresa", name: "faq.categories.empresa" },
+  { id: "logística", name: "faq.categories.logistica" },
+  { id: "financeiro", name: "faq.categories.financeiro" },
+  { id: "documentação", name: "faq.categories.documentacao" },
+  { id: "produtos", name: "faq.categories.produtos" },
+  { id: "serviços", name: "faq.categories.servicos" },
 ]
 
 const Faq = () => {
+  const { t } = useTranslation()
   const [activeCategory, setActiveCategory] = useState("all")
   const [searchQuery, setSearchQuery] = useState("")
   const [expandedId, setExpandedId] = useState<number | null>(null)
@@ -88,8 +84,8 @@ const Faq = () => {
     .filter(
       (faq) =>
         searchQuery === "" ||
-        faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        faq.answer.toLowerCase().includes(searchQuery.toLowerCase()),
+        t(faq.question).toLowerCase().includes(searchQuery.toLowerCase()) ||
+        t(faq.answer).toLowerCase().includes(searchQuery.toLowerCase())
     )
 
   // Alternar expansão da pergunta
@@ -148,7 +144,7 @@ const Faq = () => {
         >
           <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#8ab6d6] to-[#a8d8ff]">
-              FAQ & Outras Vantagens
+              {t("faq.header.title")}
             </span>
           </h2>
           <motion.p
@@ -157,7 +153,7 @@ const Faq = () => {
             animate={isInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            Tire suas dúvidas e saiba mais sobre como podemos ajudar o seu negócio.
+            {t("faq.header.subtitle")}
           </motion.p>
         </motion.div>
 
@@ -193,7 +189,7 @@ const Faq = () => {
                 transition-all
                 duration-300
               "
-              placeholder="Pesquisar perguntas..."
+              placeholder={t("faq.search.placeholder")}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
@@ -225,7 +221,7 @@ const Faq = () => {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
             >
-              {category.name}
+              {t(category.name)}
             </motion.button>
           ))}
         </motion.div>
@@ -251,7 +247,7 @@ const Faq = () => {
               transition={{ duration: 0.5 }}
             >
               <HelpCircle className="w-12 h-12 text-[#8ab6d6] mx-auto mb-4" />
-              <p className="text-gray-200">Nenhuma pergunta encontrada. Tente outra pesquisa ou categoria.</p>
+              <p className="text-gray-200">{t("faq.noResults.text")}</p>
             </motion.div>
           )}
         </div>
@@ -265,11 +261,10 @@ const Faq = () => {
         >
           <div className="flex items-center mb-4">
             <PlusCircle className="w-6 h-6 text-[#8ab6d6] mr-2" />
-            <h3 className="text-xl font-bold text-[#8ab6d6]">Tem mais perguntas?</h3>
+            <h3 className="text-xl font-bold text-[#8ab6d6]">{t("faq.additional.title")}</h3>
           </div>
           <p className="text-gray-100 mb-4">
-            Não encontrou o que procurava? Entre em contato conosco diretamente e teremos prazer em ajudar com qualquer
-            dúvida específica sobre nossos produtos e serviços.
+            {t("faq.additional.text")}
           </p>
           <motion.a
             href="#contact"
@@ -293,7 +288,7 @@ const Faq = () => {
             whileTap={{ scale: 0.95 }}
           >
             <MessageSquare className="w-5 h-5 mr-2" />
-            <span>Enviar Mensagem</span>
+            <span>{t("faq.additional.button")}</span>
           </motion.a>
         </motion.div>
       </div>
@@ -315,6 +310,7 @@ const FaqItem = ({
   index: number
   isInView: boolean
 }) => {
+  const { t } = useTranslation()
   return (
     <motion.div
       className="overflow-hidden"
@@ -350,7 +346,7 @@ const FaqItem = ({
         >
           <div className="flex items-center">
             <div className="mr-3 text-[#8ab6d6]">{faq.icon}</div>
-            <h3 className="text-xl font-bold text-[#8ab6d6]">{faq.question}</h3>
+            <h3 className="text-xl font-bold text-[#8ab6d6]">{t(faq.question)}</h3>
           </div>
           <motion.div
             animate={{ rotate: isExpanded ? 180 : 0 }}
@@ -371,7 +367,7 @@ const FaqItem = ({
               transition={{ duration: 0.3 }}
             >
               <div className="px-6 pb-6 pt-0 border-t border-[#8ab6d6]/10">
-                <p className="text-gray-100 mt-2">{faq.answer}</p>
+                <p className="text-gray-100 mt-2">{t(faq.answer)}</p>
               </div>
             </motion.div>
           )}
@@ -382,4 +378,3 @@ const FaqItem = ({
 }
 
 export default Faq
-

@@ -5,11 +5,14 @@ import { motion } from "framer-motion"
 import { MessageSquare, Ship, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { useIsMobile } from "@/hooks/use-mobile"
+import { useTranslation } from "react-i18next"
 
 export default function Hero() {
   const vidRef = useRef<HTMLVideoElement>(null)
   const [isVideoLoaded, setIsVideoLoaded] = useState(false)
   const isMobile = useIsMobile()
+
+  const { t } = useTranslation()
 
   useEffect(() => {
     if (vidRef.current) {
@@ -51,17 +54,17 @@ export default function Hero() {
         <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
           <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-[#0D6EFD]/20 text-[#0D6EFD] font-medium mb-4 border border-[#0D6EFD]/30">
             <Ship className="w-4 h-4 mr-2" />
-            Since 1999
+            {t("hero.badge")}
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
-            South Waves
-            <span className="text-[#0D6EFD] relative ml-2">Ship Supply</span>
+            {t("hero.title.main")}
+            <span className="text-[#0D6EFD] relative ml-2">{t("hero.title.highlight")}</span>
           </h1>
         </motion.div>
 
         <h2 className="text-2xl md:text-3xl font-medium mb-4 text-white">
-          <span className="text-[#0D6EFD] italic">You name it, we supply it!</span>
+          <span className="text-[#0D6EFD] italic">{t("hero.tagline")}</span>
         </h2>
 
         <div className="mb-8">
@@ -69,9 +72,7 @@ export default function Hero() {
         </div>
 
         <p className="text-xl md:text-2xl mb-10 text-gray-300 leading-relaxed">
-          Com a South Waves, sua empresa tem a garantia de produtos e serviços de qualidade.
-          <br />
-          Priorizamos a excelência e estamos continuamente buscando as melhores soluções.
+          {t("hero.description")}
         </p>
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -80,7 +81,7 @@ export default function Hero() {
             className="group bg-gradient-to-r from-[#0D6EFD] to-[#0747A6] text-white px-10 py-5 rounded-xl font-bold transition-all duration-300 hover:shadow-lg hover:shadow-[#0D6EFD]/20 flex items-center justify-center"
           >
             <span className="flex items-center">
-              Ver Produtos
+              {t("hero.buttons.seeProducts")}
               <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
             </span>
           </Link>
@@ -90,7 +91,7 @@ export default function Hero() {
             className="group bg-transparent border-2 border-[#0D6EFD] text-white px-10 py-5 rounded-xl font-bold transition-all duration-300 flex items-center justify-center hover:bg-[#0D6EFD]/10 mb-20 md:mb-0"
           >
             <span className="flex items-center">
-              Solicitar Cotação
+              {t("hero.buttons.requestQuote")}
               <MessageSquare className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
             </span>
           </Link>
@@ -99,4 +100,3 @@ export default function Hero() {
     </section>
   )
 }
-

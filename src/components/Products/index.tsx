@@ -1,8 +1,8 @@
-"use client";
+"use client"
 
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import Image from "next/image";
+import { useState, useEffect } from "react"
+import { motion } from "framer-motion"
+import Image from "next/image"
 import {
   Box,
   Clipboard,
@@ -22,151 +22,151 @@ import {
   Filter,
   ChevronDown,
   ChevronUp,
-} from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";
+} from "lucide-react"
+import { useIsMobile } from "@/hooks/use-mobile"
+import { useTranslation } from "react-i18next"
 
-// Definição dos produtos com ícones e descrições
+// Função auxiliar para obter texto traduzido de forma segura
+const safeTranslate = (t: any, key: string): string => {
+  try {
+    const translated = t(key)
+    return typeof translated === "string" ? translated : key
+  } catch (error) {
+    return key
+  }
+}
+
+// Dados dos produtos (as strings serão extraídas para o JSON)
 const productData = [
   {
-    title: "Hatch Cover Tapes",
+    title: "products.productData.product1.title",
     icon: <Tape className="h-10 w-10 text-white" />,
-    description:
-      "Fitas de vedar porão de alta qualidade para vedação hermética e proteção contra intempéries.",
+    description: "products.productData.product1.description",
     image: "/images/produtos/hatch-cover-tapes.jpg",
     featured: true,
     category: "deck",
   },
   {
-    title: "Private for the Crew",
+    title: "products.productData.product2.title",
     icon: <User className="h-10 w-10 text-white" />,
-    description:
-      "Produtos de uso pessoal para marinheiros, incluindo itens de higiene e conforto.",
+    description: "products.productData.product2.description",
     image: "/images/produtos/crew-personal.jpeg",
     featured: true,
     category: "personal",
   },
   {
-    title: "Cabin Stores",
+    title: "products.productData.product3.title",
     icon: <Bed className="h-10 w-10 text-white" />,
-    description:
-      "Suprimentos para cabines, incluindo roupas de cama, toalhas e itens de conforto.",
+    description: "products.productData.product3.description",
     image: "/images/produtos/cabin-stores.jpg",
     category: "accommodation",
   },
   {
-    title: "Galley Stores",
+    title: "products.productData.product4.title",
     icon: <Utensils className="h-10 w-10 text-white" />,
-    description: "Equipamentos e utensílios para cozinha de embarcações.",
+    description: "products.productData.product4.description",
     image: "/images/produtos/galley-stores.jpg",
     category: "accommodation",
   },
   {
-    title: "Cleaning Material",
+    title: "products.productData.product5.title",
     icon: <Sparkles className="h-10 w-10 text-white" />,
-    description:
-      "Produtos de limpeza industrial e marítima para todas as áreas da embarcação.",
+    description: "products.productData.product5.description",
     image: "/images/produtos/cleaning-material.jpg",
     category: "maintenance",
   },
   {
-    title: "Chemical Gases",
+    title: "products.productData.product6.title",
     icon: <Flask className="h-10 w-10 text-white" />,
-    description:
-      "Gases químicos para uso industrial e operacional em embarcações.",
+    description: "products.productData.product6.description",
     image: "/images/produtos/chemical-gases.jpg",
     category: "technical",
   },
   {
-    title: "Pyrotechnics",
+    title: "products.productData.product7.title",
     icon: <Rocket className="h-10 w-10 text-white" />,
-    description:
-      "Sinalizadores e pirotecnia marítima certificada para emergências.",
+    description: "products.productData.product7.description",
     image: "/images/produtos/pyrotechnics.jpg",
     category: "safety",
   },
   {
-    title: "Stationery",
+    title: "products.productData.product8.title",
     icon: <Clipboard className="h-10 w-10 text-white" />,
-    description:
-      "Material de escritório e papelaria para documentação e operações administrativas.",
+    description: "products.productData.product8.description",
     image: "/images/produtos/stationery.jpg",
     category: "office",
   },
   {
-    title: "Computing",
+    title: "products.productData.product9.title",
     icon: <Laptop className="h-10 w-10 text-white" />,
-    description:
-      "Equipamentos e suprimentos de informática para operações a bordo.",
+    description: "products.productData.product9.description",
     image: "/images/produtos/computing.jpg",
     category: "office",
   },
   {
-    title: "Safety Equipment",
+    title: "products.productData.product10.title",
     icon: <Shield className="h-10 w-10 text-white" />,
-    description: "Equipamentos de segurança certificados e de alta qualidade.",
+    description: "products.productData.product10.description",
     image: "/images/produtos/safety-equipment.jpg",
     category: "safety",
   },
   {
-    title: "Provisions",
+    title: "products.productData.product11.title",
     icon: <ShoppingBag className="h-10 w-10 text-white" />,
-    description:
-      "Alimentos e suprimentos essenciais para viagens de longa duração.",
+    description: "products.productData.product11.description",
     image: "/images/produtos/provisions.jpg",
     category: "food",
   },
   {
-    title: "Bonded",
+    title: "products.productData.product12.title",
     icon: <Wine className="h-10 w-10 text-white" />,
-    description:
-      "Bebidas e produtos sob regime aduaneiro especial para embarcações.",
+    description: "products.productData.product12.description",
     image: "/images/produtos/bonded.jpg",
     category: "food",
   },
-];
+]
 
-// Categorias para filtro
+// Categorias com tradução
 const categories = [
-  { id: "all", name: "Todos os Produtos" },
-  { id: "deck", name: "Convés & Exterior" },
-  { id: "personal", name: "Uso Pessoal" },
-  { id: "accommodation", name: "Acomodações" },
-  { id: "maintenance", name: "Limpeza & Manutenção" },
-  { id: "technical", name: "Técnico" },
-  { id: "safety", name: "Segurança" },
-  { id: "office", name: "Escritório" },
-  { id: "food", name: "Alimentação" },
-];
+  { id: "all", name: "products.categories.all" },
+  { id: "deck", name: "products.categories.deck" },
+  { id: "personal", name: "products.categories.personal" },
+  { id: "accommodation", name: "products.categories.accommodation" },
+  { id: "maintenance", name: "products.categories.maintenance" },
+  { id: "technical", name: "products.categories.technical" },
+  { id: "safety", name: "products.categories.safety" },
+  { id: "office", name: "products.categories.office" },
+  { id: "food", name: "products.categories.food" },
+]
 
 const Products = () => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const [activeCategory, setActiveCategory] = useState("all");
-  const [searchQuery, setSearchQuery] = useState("");
-  const [filteredProducts, setFilteredProducts] = useState(productData);
-  const [showCategories, setShowCategories] = useState(false);
-  const isMobile = useIsMobile();
+  const { t } = useTranslation()
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+  const [activeCategory, setActiveCategory] = useState("all")
+  const [searchQuery, setSearchQuery] = useState("")
+  const [filteredProducts, setFilteredProducts] = useState(productData)
+  const [showCategories, setShowCategories] = useState(false)
+  const isMobile = useIsMobile()
 
   // Filtrar produtos com base na categoria e pesquisa
   useEffect(() => {
-    let filtered = productData;
+    let filtered = productData
 
     if (activeCategory !== "all") {
-      filtered = filtered.filter(
-        (product) => product.category === activeCategory,
-      );
+      filtered = filtered.filter((product) => product.category === activeCategory)
     }
 
     if (searchQuery) {
-      const query = searchQuery.toLowerCase();
+      const query = searchQuery.toLowerCase()
       filtered = filtered.filter(
         (product) =>
-          product.title.toLowerCase().includes(query) ||
-          product.description.toLowerCase().includes(query),
-      );
+          safeTranslate(t, product.title).toLowerCase().includes(query) ||
+          safeTranslate(t, product.description).toLowerCase().includes(query),
+      )
     }
 
-    setFilteredProducts(filtered);
-  }, [activeCategory, searchQuery]);
+    setFilteredProducts(filtered)
+  }, [activeCategory, searchQuery, t])
 
   // Variantes de animação para o container
   const containerVariants = {
@@ -177,7 +177,7 @@ const Products = () => {
         staggerChildren: isMobile ? 0 : 0.1,
       },
     },
-  };
+  }
 
   return (
     <section
@@ -192,26 +192,21 @@ const Products = () => {
 
       {/* TÍTULO E SUBTÍTULO */}
       <div className="container relative z-10 mx-auto px-4 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
+        <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
           <div className="mb-4 inline-flex items-center justify-center rounded-full border border-[#47A5FF]/30 bg-[#47A5FF]/20 px-4 py-2 font-medium text-[#47A5FF]">
             <Box className="mr-2 h-4 w-4" />
-            Catálogo Completo
+            {safeTranslate(t, "products.header.badge")}
           </div>
 
           <h2 className="mb-6 text-4xl font-bold md:text-5xl">
-            Nossos <span className="text-[#47A5FF]">Produtos</span> & Serviços
+            {safeTranslate(t, "products.header.title.main")}
+            <span className="text-[#47A5FF]"> {safeTranslate(t, "products.header.title.highlight")}</span>
+            {safeTranslate(t, "products.header.title.suffix")}
           </h2>
 
           <p className="mx-auto mb-12 max-w-3xl text-lg text-gray-300">
-            <span className="font-medium italic">
-              You name it, we supply it!
-            </span>{" "}
-            Fornecemos uma ampla gama de produtos marítimos de alta qualidade
-            para atender todas as necessidades da sua embarcação.
+            <span className="font-medium italic">{safeTranslate(t, "products.header.tagline")}</span>{" "}
+            {safeTranslate(t, "products.header.description")}
           </p>
         </motion.div>
 
@@ -226,7 +221,7 @@ const Products = () => {
               <input
                 type="text"
                 className="block w-full rounded-lg border border-[#47A5FF]/30 bg-[#1E2837] py-3 pl-10 pr-4 text-white placeholder-gray-400 transition-all focus:outline-none focus:ring-2 focus:ring-[#47A5FF]/50"
-                placeholder="Buscar produtos..."
+                placeholder={safeTranslate(t, "products.search.placeholder")}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
@@ -241,15 +236,13 @@ const Products = () => {
                 <div className="flex items-center">
                   <Filter className="mr-2 h-5 w-5 text-[#47A5FF]" />
                   <span>
-                    {categories.find((c) => c.id === activeCategory)?.name ||
-                      "Todos"}
+                    {safeTranslate(
+                      t,
+                      categories.find((c) => c.id === activeCategory)?.name || "products.categories.all",
+                    )}
                   </span>
                 </div>
-                {showCategories ? (
-                  <ChevronUp className="h-5 w-5" />
-                ) : (
-                  <ChevronDown className="h-5 w-5" />
-                )}
+                {showCategories ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
               </button>
 
               {showCategories && (
@@ -257,13 +250,15 @@ const Products = () => {
                   {categories.map((category) => (
                     <button
                       key={category.id}
-                      className={`w-full px-4 py-2 text-left hover:bg-[#47A5FF]/10 ${activeCategory === category.id ? "font-medium text-[#47A5FF]" : "text-white"}`}
+                      className={`w-full px-4 py-2 text-left hover:bg-[#47A5FF]/10 ${
+                        activeCategory === category.id ? "font-medium text-[#47A5FF]" : "text-white"
+                      }`}
                       onClick={() => {
-                        setActiveCategory(category.id);
-                        setShowCategories(false);
+                        setActiveCategory(category.id)
+                        setShowCategories(false)
                       }}
                     >
-                      {category.name}
+                      {safeTranslate(t, category.name)}
                     </button>
                   ))}
                 </div>
@@ -286,7 +281,7 @@ const Products = () => {
                 `}
                 onClick={() => setActiveCategory(category.id)}
               >
-                {category.name}
+                {safeTranslate(t, category.name)}
               </button>
             ))}
           </div>
@@ -298,8 +293,8 @@ const Products = () => {
         <span>
           {filteredProducts.length}{" "}
           {filteredProducts.length === 1
-            ? "produto encontrado"
-            : "produtos encontrados"}
+            ? safeTranslate(t, "products.results.singular")
+            : safeTranslate(t, "products.results.plural")}
         </span>
       </div>
 
@@ -320,24 +315,23 @@ const Products = () => {
               onHover={() => setHoveredIndex(index)}
               onLeave={() => setHoveredIndex(null)}
               isMobile={isMobile}
+              t={t}
             />
           ))}
         </motion.div>
       ) : (
         <div className="container mx-auto px-4 py-16 text-center">
           <Box className="mx-auto mb-4 h-16 w-16 text-[#47A5FF]/50" />
-          <h3 className="mb-2 text-xl font-bold">Nenhum produto encontrado</h3>
-          <p className="mb-6 text-gray-400">
-            Tente ajustar seus filtros ou termos de busca.
-          </p>
+          <h3 className="mb-2 text-xl font-bold">{safeTranslate(t, "products.noResults.title")}</h3>
+          <p className="mb-6 text-gray-400">{safeTranslate(t, "products.noResults.description")}</p>
           <button
             onClick={() => {
-              setActiveCategory("all");
-              setSearchQuery("");
+              setActiveCategory("all")
+              setSearchQuery("")
             }}
             className="rounded-lg bg-[#47A5FF] px-6 py-3 font-medium text-white transition-colors hover:bg-[#2D8BE5]"
           >
-            Limpar Filtros
+            {safeTranslate(t, "products.noResults.button")}
           </button>
         </div>
       )}
@@ -350,31 +344,25 @@ const Products = () => {
           transition={{ duration: 0.6 }}
           className="mx-auto max-w-4xl rounded-2xl border border-[#47A5FF]/20 bg-gradient-to-r from-[#0A1A2F] to-[#0F2A47] p-10 shadow-lg"
         >
-          <h3 className="mb-4 text-3xl font-bold text-white">
-            Não encontrou exatamente o que precisa?
-          </h3>
-          <p className="mx-auto mb-8 max-w-2xl text-gray-300">
-            Trabalhamos com uma ampla variedade de produtos e estamos prontos
-            para te ajudar a encontrar exatamente o que você procura. Fale com
-            nossa equipe e receba suporte personalizado para sua necessidade.
-          </p>
+          <h3 className="mb-4 text-3xl font-bold text-white">{safeTranslate(t, "products.cta.title")}</h3>
+          <p className="mx-auto mb-8 max-w-2xl text-gray-300">{safeTranslate(t, "products.cta.description")}</p>
 
           <a
             href="#contact"
             className="inline-flex transform items-center gap-2 rounded-xl bg-gradient-to-r from-[#47A5FF] to-[#2D8BE5] px-8 py-4 font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#47A5FF]/20"
           >
-            Solicitar Cotação Personalizada
+            {safeTranslate(t, "products.cta.button")}
             <ArrowRight className="h-5 w-5" />
           </a>
         </motion.div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Products;
+export default Products
 
-// Componente de card de produto com animações simplificadas
+// Componente de card de produto
 const ProductCard = ({
   product,
   index,
@@ -382,15 +370,16 @@ const ProductCard = ({
   onHover,
   onLeave,
   isMobile,
+  t,
 }: {
-  product: (typeof productData)[0];
-  index: number;
-  isHovered: boolean;
-  onHover: () => void;
-  onLeave: () => void;
-  isMobile: boolean;
+  product: (typeof productData)[0]
+  index: number
+  isHovered: boolean
+  onHover: () => void
+  onLeave: () => void
+  isMobile: boolean
+  t: any
 }) => {
-  // Variantes de animação para cada card
   const cardVariants = {
     hidden: { opacity: 0, y: isMobile ? 0 : 50 },
     visible: {
@@ -402,7 +391,7 @@ const ProductCard = ({
         ease: "easeOut",
       },
     },
-  };
+  }
 
   return (
     <motion.div
@@ -416,25 +405,14 @@ const ProductCard = ({
       <div
         className={`
           relative 
-          z-10 flex h-full
-          flex-col overflow-hidden
-          rounded-xl
-          border
-          border-[#47A5FF]/20
-          bg-gradient-to-br from-[#1E2837]
-          to-[#0F2A47]
-          shadow-lg
-          transition-all
-          duration-300
-          hover:border-[#47A5FF]/50
-          hover:shadow-xl
+          z-10 flex h-full flex-col overflow-hidden rounded-xl border border-[#47A5FF]/20 bg-gradient-to-br from-[#1E2837] to-[#0F2A47] shadow-lg transition-all duration-300 hover:border-[#47A5FF]/50 hover:shadow-xl
         `}
       >
-        {/* Image */}
+        {/* Imagem */}
         <div className="relative h-52 w-full overflow-hidden">
           <Image
             src={product.image || "/placeholder.svg?height=300&width=400"}
-            alt={product.title}
+            alt={safeTranslate(t, product.title)}
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-110"
           />
@@ -443,44 +421,37 @@ const ProductCard = ({
           {/* Badge para produtos em destaque */}
           {product.featured && (
             <div className="absolute right-4 top-4 rounded-full bg-[#47A5FF] px-3 py-1 text-xs font-bold text-white">
-              Destaque
+              {safeTranslate(t, "products.productCard.featured")}
             </div>
           )}
         </div>
 
-        {/* Content */}
+        {/* Conteúdo */}
         <div className="flex flex-grow flex-col items-center p-6 text-center">
-          {/* Icon */}
+          {/* Ícone */}
           <div
             className={`
-              relative
-              -mt-14 mb-4
-              flex
-              h-16 w-16 items-center
-              justify-center rounded-full border-4
-              border-[#1E2837]
-              bg-gradient-to-br
-              from-[#47A5FF]
-              to-[#2D8BE5] shadow-lg
-              transition-all duration-300
-              ${isHovered && !isMobile ? "scale-110" : "scale-100"}
+              relative -mt-14 mb-4 flex h-16 w-16 items-center justify-center rounded-full border-4 border-[#1E2837] bg-gradient-to-br from-[#47A5FF] to-[#2D8BE5] shadow-lg transition-all duration-300 ${
+                isHovered && !isMobile ? "scale-110" : "scale-100"
+              }
             `}
           >
             {product.icon}
           </div>
 
-          <h3 className="mb-3 text-xl font-bold text-white">{product.title}</h3>
+          <h3 className="mb-3 text-xl font-bold text-white">{safeTranslate(t, product.title)}</h3>
 
-          <p className="mb-6 text-sm text-gray-300">{product.description}</p>
+          <p className="mb-6 text-sm text-gray-300">{safeTranslate(t, product.description)}</p>
         </div>
 
-        {/* Button */}
+        {/* Botão */}
         <div className="mt-auto p-6 pt-0">
           <button className="w-full rounded-lg border border-[#47A5FF]/50 bg-[#47A5FF]/10 py-3 text-sm font-medium text-[#47A5FF] transition-colors duration-300 hover:bg-[#47A5FF] hover:text-white">
-            Ver Detalhes
+            {safeTranslate(t, "products.productCard.button")}
           </button>
         </div>
       </div>
     </motion.div>
-  );
-};
+  )
+}
+

@@ -3,28 +3,28 @@ import { Menu } from "@/types/menu";
 const menuData: Menu[] = [
   {
     id: 1,
-    title: "Home",
+    title: "menu.home",
     path: "/",
     newTab: false,
     icon: "material-symbols:home",
   },
   {
     id: 2,
-    title: "Sobre Nós",
+    title: "menu.about",
     path: "/about",
     newTab: false,
     icon: "mdi:office-building-cog-outline",
   },
   {
     id: 3,
-    title: "Serviços",
+    title: "menu.services",
     path: "/features",
     newTab: false,
     icon: "mdi:cog-sync-outline",
   },
   {
     id: 5,
-    title: "Contato",
+    title: "menu.contact",
     path: "/contact",
     newTab: false,
     icon: "mdi:contact-mail-outline",

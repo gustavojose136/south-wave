@@ -3,13 +3,15 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
-import { Shield, MapPin, Clock, Award, Anchor, Ship, Navigation } from 'lucide-react';
+import { Shield, MapPin, Clock, Award, Anchor, Ship, Navigation } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+  const { t } = useTranslation();
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { once: false, amount: 0.2 });
   
-  // Scroll-based animations
+  // Animações baseadas no scroll
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end start"]
@@ -19,27 +21,27 @@ const About = () => {
   const textY = useTransform(scrollYProgress, [0, 1], [0, -30]);
   const parallaxBg = useTransform(scrollYProgress, [0, 1], [0, -100]);
   
-  // Valores da empresa
+  // Valores da empresa (utilizando traduções)
   const companyValues = [
     {
       icon: <Shield className="w-8 h-8 text-[#8ab6d6]" />,
-      title: "Safety First",
-      description: "Segurança é um valor inquestionável em todas as nossas operações."
+      title: t("about.companyValues.safetyFirst.title"),
+      description: t("about.companyValues.safetyFirst.description")
     },
     {
       icon: <MapPin className="w-8 h-8 text-[#8ab6d6]" />,
-      title: "Localização Estratégica",
-      description: "Posicionados entre os principais portos do Sul do Brasil."
+      title: t("about.companyValues.strategicLocation.title"),
+      description: t("about.companyValues.strategicLocation.description")
     },
     {
       icon: <Clock className="w-8 h-8 text-[#8ab6d6]" />,
-      title: "Agilidade",
-      description: "Respostas rápidas e entregas no prazo para suas necessidades."
+      title: t("about.companyValues.agility.title"),
+      description: t("about.companyValues.agility.description")
     },
     {
       icon: <Award className="w-8 h-8 text-[#8ab6d6]" />,
-      title: "Qualidade Certificada",
-      description: "Produtos e serviços que atendem às normas internacionais."
+      title: t("about.companyValues.certifiedQuality.title"),
+      description: t("about.companyValues.certifiedQuality.description")
     }
   ];
 
@@ -91,7 +93,7 @@ const About = () => {
       >
         <Image
           src="/images/imagemPorto.png"
-          alt="Fundo Porto"
+          alt={t("about.backgroundAlt")}
           fill
           style={{ objectFit: "cover" }}
           priority
@@ -115,7 +117,7 @@ const About = () => {
             >
               <h2 className="text-4xl md:text-5xl font-extrabold mb-6">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#8ab6d6] to-[#a8d8ff]">
-                  Sobre a South Waves
+                  {t("about.heading")}
                 </span>
               </h2>
             </motion.div>
@@ -126,9 +128,7 @@ const About = () => {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              Com a <strong className="text-[#8ab6d6]">South Waves</strong>, sua empresa tem a garantia de 
-              produtos e serviços de qualidade. Priorizamos a excelência e estamos 
-              continuamente buscando as melhores soluções.
+              {t("about.description")}
             </motion.p>
             
             {/* CARDS DE VALORES */}
@@ -157,10 +157,7 @@ const About = () => {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 1 }}
             >
-              Estamos estrategicamente localizados em <strong className="text-[#8ab6d6]">São Francisco do Sul, SC</strong>, 
-              entre <strong className="text-[#8ab6d6]">Paranaguá, Itajaí e Imbituba</strong>. 
-              Isso garante facilidade logística, redução de trajeto e mais agilidade 
-              para seus fornecimentos.
+              {t("about.locationDescription")}
             </motion.p>
 
             <motion.div
@@ -187,7 +184,7 @@ const About = () => {
                   hover:-translate-y-1
                 "
               >
-                Fale Conosco
+                {t("about.contactButton")}
               </a>
             </motion.div>
           </motion.div>
@@ -218,7 +215,7 @@ const About = () => {
               >
                 <Image
                   src="/images/porto.jpg"
-                  alt="Porto e logística"
+                  alt={t("about.featuredImageAlt")}
                   width={500}
                   height={300}
                   className="rounded-lg shadow-2xl border-2 border-[#8ab6d6]/70"
@@ -259,10 +256,10 @@ const About = () => {
                 }}
               >
                 <span className="text-5xl font-extrabold text-[#0b0e2a]">
-                  20+
+                  {t("about.experience.years")}
                 </span>
                 <span className="text-sm font-medium text-[#0b0e2a] text-center px-2">
-                  Anos de Experiência
+                  {t("about.experience.text")}
                 </span>
               </motion.div>
               

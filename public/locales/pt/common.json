@@ -1,40 +1,446 @@
 {
-  "welcome": "Bem-vindo",
   "hero": {
-    "title": "South Waves Serviços Marítimos e Terrestres",
-    "description": "A South Waves entrega uma variedade de serviços: transporte de cargas, movimentação portuária, serviços terrestres e marítimos, além de consultoria logística. Atuamos no Porto de Vitória e Vila Velha há 29 anos, sempre garantindo excelência e compromisso!"
-  },
-  "features": {
-    "subtitle": "Nossos Serviços",
-    "title": "O que a South Waves Serviços oferece",
-    "paragraph": "Com mais de 29 anos de experiência, entregamos soluções logísticas marítimas e terrestres, sempre priorizando eficiência, segurança e qualidade."
+    "badge": "Desde 1999",
+    "title": {
+      "main": "South Waves",
+      "highlight": "Ship Supply"
+    },
+    "tagline": "O que você precisar, nós fornecemos!",
+    "description": "Com a South Waves, sua empresa tem a garantia de produtos e serviços de qualidade. Priorizamos a excelência e estamos continuamente buscando as melhores soluções.",
+    "buttons": {
+      "seeProducts": "Ver Produtos",
+      "requestQuote": "Solicitar Cotação"
+    }
   },
   "about": {
-    "title": "Excelência em Serviços Portuários e Operacionais",
-    "description": "Com anos de experiência, a South Waves é referência na prestação de serviços especializados para o setor portuário e industrial. Nosso compromisso é garantir qualidade, segurança e eficiência em todas as operações realizadas.\n\nContamos com uma equipe qualificada e soluções personalizadas para atender às necessidades de nossos clientes, desde limpeza industrial até suporte em operações logísticas.",
-    "cta": "Saiba Mais",
-    "image_alt_main": "Sobre a South Waves",
-    "image_alt_team": "Equipe da South Waves",
-    "experience_years": "25+",
-    "experience_title": "Anos de Experiência",
-    "experience_description": "Em Serviços Portuários e Logísticos"
+    "heading": "Sobre a South Waves",
+    "description": "Com a South Waves, sua empresa tem a garantia de produtos e serviços de qualidade. Priorizamos a excelência e estamos continuamente buscando as melhores soluções.",
+    "companyValues": {
+      "safetyFirst": {
+        "title": "Segurança em Primeiro Lugar",
+        "description": "Segurança é um valor inquestionável em todas as nossas operações."
+      },
+      "strategicLocation": {
+        "title": "Localização Estratégica",
+        "description": "Posicionados entre os principais portos do Sul do Brasil."
+      },
+      "agility": {
+        "title": "Agilidade",
+        "description": "Respostas rápidas e entregas no prazo para suas necessidades."
+      },
+      "certifiedQuality": {
+        "title": "Qualidade Certificada",
+        "description": "Produtos e serviços que atendem às normas internacionais."
+      }
+    },
+    "locationDescription": "Estamos estrategicamente localizados em São Francisco do Sul, SC, entre Paranaguá, Itajaí e Imbituba. Isso garante facilidade logística, redução de trajeto e mais agilidade para seus fornecimentos.",
+    "contactButton": "Fale Conosco",
+    "experience": {
+      "years": "20+",
+      "text": "Anos de Experiência"
+    },
+    "backgroundAlt": "Imagem de fundo do porto",
+    "featuredImageAlt": "Porto e logística"
+  },
+  "whyChooseUs": {
+    "title": "Por que escolher a South Waves?",
+    "subtitle": "Entenda os diferenciais que fazem de nós a melhor escolha para o seu negócio marítimo e portuário.",
+    "stats": {
+      "stat1": { "label": "Anos de Experiência" },
+      "stat2": { "label": "Clientes Satisfeitos" },
+      "stat3": { "label": "Portos Atendidos" },
+      "stat4": { "label": "Taxa de Satisfação" }
+    },
+    "benefits": {
+      "progressiveDiscounts": {
+        "title": "Descontos Progressivos",
+        "content": "Quanto maior o pedido, maior o desconto. Oferecemos condições especiais que se adaptam ao volume da sua operação."
+      },
+      "multiplePaymentOptions": {
+        "title": "Múltiplas Opções de Pagamento",
+        "content": "Oferecemos crédito, pagamento via companhia e pagamento via cartão de crédito para facilitar suas transações."
+      },
+      "flexiblePrices": {
+        "title": "Preços Flexíveis",
+        "content": "Nossos preços são sempre flexíveis e adaptáveis às suas necessidades. Prices are very accommodating."
+      },
+      "personalizedService": {
+        "title": "Atendimento Personalizado",
+        "content": "Para qualquer necessidade adicional, entre em contato. Somos flexíveis e prontos para oferecer soluções sob medida."
+      }
+    },
+    "testimonial": {
+      "title": "Certificação de Excelência",
+      "content": "WA South Waves tem sido nossa parceira confiável por mais de 10 anos. Seu compromisso com a qualidade, flexibilidade de pagamentos e a pontualidade é incomparável no setor marítimo.",
+      "author": "— Capitão Roberto Silva, Diretor de Operações Marítimas"
+    },
+    "cta": "Entre em Contato Agora"
+  },
+  "services": {
+    "header": {
+      "badge": "Nossos Serviços",
+      "title": {
+        "main": "Soluções Completas para",
+        "highlight": "Reposição Naval"
+      },
+      "description": "Oferecemos serviços especializados para garantir que sua embarcação receba as peças certas no momento certo, minimizando o tempo de inatividade."
+    },
+    "serviceList": {
+      "service1": {
+        "title": "Fornecimento de Peças Originais",
+        "description": "Fornecemos peças originais e homologadas para todos os tipos de embarcações, garantindo a autenticidade e qualidade dos componentes.",
+        "features": [
+          "Peças com certificação de origem",
+          "Garantia do fabricante",
+          "Rastreabilidade completa"
+        ]
+      },
+      "service2": {
+        "title": "Entrega Expressa",
+        "description": "Serviço de entrega expressa para peças urgentes em qualquer porto do Brasil, minimizando o tempo de inatividade da sua embarcação.",
+        "features": [
+          "Entrega em 24-48h",
+          "Rastreamento em tempo real",
+          "Atendimento 24/7 para emergências"
+        ]
+      },
+      "service3": {
+        "title": "Suporte Técnico Especializado",
+        "description": "Nossa equipe técnica oferece suporte na identificação e seleção das peças corretas para sua embarcação.",
+        "features": [
+          "Consultoria técnica especializada",
+          "Identificação precisa de componentes",
+          "Recomendações de substituição"
+        ]
+      },
+      "service4": {
+        "title": "Documentação e Certificação",
+        "description": "Fornecemos toda a documentação necessária para peças críticas, garantindo conformidade com regulamentações marítimas.",
+        "features": [
+          "Certificados de conformidade",
+          "Documentação para classificadoras",
+          "Relatórios de testes e qualidade"
+        ]
+      }
+    },
+    "premiumBadge": "Serviço Premium",
+    "emergency": {
+      "badge": "Atendimento 24/7",
+      "title": "Serviço de Emergência para Reposição de Peças Críticas",
+      "description": "Entendemos que o tempo de inatividade de uma embarcação representa custos significativos. Por isso, oferecemos um serviço de emergência 24/7 para fornecimento e entrega de peças críticas em qualquer porto do Brasil.",
+      "features": [
+        "Identificação rápida de peças críticas",
+        "Entrega expressa em até 24h",
+        "Suporte técnico especializado",
+        "Linha direta para emergências"
+      ],
+      "cta": "Contato de Emergência"
+    }
+  },
+  "products": {
+    "header": {
+      "badge": "Catálogo Completo",
+      "title": {
+        "main": "Nossos",
+        "highlight": "Produtos",
+        "suffix": " & Serviços"
+      },
+      "tagline": "You name it, we supply it!",
+      "description": "Fornecemos uma ampla gama de produtos marítimos de alta qualidade para atender todas as necessidades da sua embarcação."
+    },
+    "search": {
+      "placeholder": "Buscar produtos..."
+    },
+    "categories": {
+      "all": "Todos os Produtos",
+      "deck": "Convés & Exterior",
+      "personal": "Uso Pessoal",
+      "accommodation": "Acomodações",
+      "maintenance": "Limpeza & Manutenção",
+      "technical": "Técnico",
+      "safety": "Segurança",
+      "office": "Escritório",
+      "food": "Alimentação"
+    },
+    "results": {
+      "singular": "produto encontrado",
+      "plural": "produtos encontrados"
+    },
+    "noResults": {
+      "title": "Nenhum produto encontrado",
+      "description": "Tente ajustar seus filtros ou termos de busca.",
+      "button": "Limpar Filtros"
+    },
+    "cta": {
+      "title": "Não encontrou exatamente o que precisa?",
+      "description": "Trabalhamos com uma ampla variedade de produtos e estamos prontos para te ajudar a encontrar exatamente o que você procura. Fale com nossa equipe e receba suporte personalizado para sua necessidade.",
+      "button": "Solicitar Cotação Personalizada"
+    },
+    "productCard": {
+      "featured": "Destaque",
+      "button": "Ver Detalhes"
+    },
+    "productData": {
+      "product1": {
+        "title": "Hatch Cover Tapes",
+        "description": "Fitas de vedar porão de alta qualidade para vedação hermética e proteção contra intempéries."
+      },
+      "product2": {
+        "title": "Private for the Crew",
+        "description": "Produtos de uso pessoal para marinheiros, incluindo itens de higiene e conforto."
+      },
+      "product3": {
+        "title": "Cabin Stores",
+        "description": "Suprimentos para cabines, incluindo roupas de cama, toalhas e itens de conforto."
+      },
+      "product4": {
+        "title": "Galley Stores",
+        "description": "Equipamentos e utensílios para cozinha de embarcações."
+      },
+      "product5": {
+        "title": "Cleaning Material",
+        "description": "Produtos de limpeza industrial e marítima para todas as áreas da embarcação."
+      },
+      "product6": {
+        "title": "Chemical Gases",
+        "description": "Gases químicos para uso industrial e operacional em embarcações."
+      },
+      "product7": {
+        "title": "Pyrotechnics",
+        "description": "Sinalizadores e pirotecnia marítima certificada para emergências."
+      },
+      "product8": {
+        "title": "Stationery",
+        "description": "Material de escritório e papelaria para documentação e operações administrativas."
+      },
+      "product9": {
+        "title": "Computing",
+        "description": "Equipamentos e suprimentos de informática para operações a bordo."
+      },
+      "product10": {
+        "title": "Safety Equipment",
+        "description": "Equipamentos de segurança certificados e de alta qualidade."
+      },
+      "product11": {
+        "title": "Provisions",
+        "description": "Alimentos e suprimentos essenciais para viagens de longa duração."
+      },
+      "product12": {
+        "title": "Bonded",
+        "description": "Bebidas e produtos sob regime aduaneiro especial para embarcações."
+      }
+    }
+  },
+  "culturalProducts": {
+    "hero": {
+      "badge": "Carne Bovina Halal Premium",
+      "title": {
+        "part1": "Carne",
+        "highlight": "Halal",
+        "part2": "da Mais Alta Qualidade"
+      },
+      "description": "Oferecemos carne bovina Halal premium, preparada com o máximo respeito às tradições islâmicas. Cada corte é cuidadosamente selecionado e certificado, garantindo qualidade excepcional e conformidade com os princípios da sua fé.",
+      "featureBadges": [
+        "100% Certificado",
+        "Abate Tradicional",
+        "Qualidade Premium"
+      ],
+      "buttonSolicitarAgora": "Solicitar Agora",
+      "buttonVerCortes": "Ver Cortes Disponíveis",
+      "imageAlt": "Carne Bovina Halal Premium",
+      "overlayTitle": "Certificação Halal Garantida",
+      "overlayDescription": "Nossa carne bovina segue rigorosamente os princípios islâmicos em todo o processo, do abate à embalagem, garantindo total conformidade com as exigências Halal."
+    },
+    "features": {
+      "title": "Por Que Escolher Nossa Carne Bovina Halal",
+      "description": "Comprometidos com a excelência e o respeito às tradições, oferecemos carne bovina Halal que atende aos mais altos padrões de qualidade e conformidade religiosa.",
+      "halalFeatures": [
+        {
+          "title": "100% Certificada",
+          "description": "Certificação Halal garantida por autoridades islâmicas reconhecidas"
+        },
+        {
+          "title": "Qualidade Premium",
+          "description": "Carne de alta qualidade, de animais criados com os melhores cuidados"
+        },
+        {
+          "title": "Cortes Especiais",
+          "description": "Variedade de cortes preparados de acordo com tradições islâmicas"
+        },
+        {
+          "title": "Respeito às Tradições",
+          "description": "Abate realizado com respeito total aos princípios islâmicos"
+        }
+      ]
+    },
+    "beefCuts": {
+      "title": "Cortes Premium Disponíveis",
+      "description": "Oferecemos uma seleção de cortes bovinos Halal da mais alta qualidade, preparados com cuidado e respeito às tradições islâmicas.",
+      "items": [
+        {
+          "name": "Filé Mignon Halal",
+          "description": "Corte nobre e macio, perfeito para ocasiões especiais",
+          "price": "Sob consulta"
+        },
+        {
+          "name": "Picanha Halal",
+          "description": "Corte suculento com camada de gordura característica",
+          "price": "Sob consulta"
+        },
+        {
+          "name": "Costela Bovina Halal",
+          "description": "Ideal para preparações lentas e saborosas",
+          "price": "Sob consulta"
+        }
+      ],
+      "badge": "Certificado Halal",
+      "button": "Solicitar"
+    },
+    "certification": {
+      "title": "Certificação Halal Garantida",
+      "description": "Nossa carne bovina Halal é certificada por autoridades islâmicas reconhecidas, garantindo que todo o processo, desde a criação dos animais até o abate e processamento, segue rigorosamente os princípios islâmicos. Você pode confiar na autenticidade e na qualidade de cada corte que oferecemos.",
+      "certifications": [
+        {
+          "title": "Certificado FAMBRAS",
+          "description": "Federação das Associações Muçulmanas do Brasil",
+          "image": "/images/certificados/FAMBRAS.png"
+        },
+        {
+          "title": "Certificado CDIAL HALAL",
+          "description": "Centro de Divulgação do Islam para América Latina",
+          "image": "/images/certificados/CDIAL-HALAL.png"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Pronto para Experimentar Nossa Carne Bovina Halal?",
+      "description": "Entre em contato conosco hoje mesmo para solicitar nossos cortes premium de carne bovina Halal. Garantimos qualidade, autenticidade e respeito total às suas tradições.",
+      "button": "Solicitar Carne Bovina Halal"
+    }
+  },
+  "faq": {
+    "header": {
+      "title": "FAQ & Outras Vantagens",
+      "subtitle": "Tire suas dúvidas e saiba mais sobre como podemos ajudar o seu negócio."
+    },
+    "search": {
+      "placeholder": "Pesquisar perguntas..."
+    },
+    "categories": {
+      "all": "Todas",
+      "empresa": "Sobre a Empresa",
+      "logistica": "Logística",
+      "financeiro": "Financeiro",
+      "documentacao": "Documentação",
+      "produtos": "Produtos",
+      "servicos": "Serviços"
+    },
+    "noResults": {
+      "text": "Nenhuma pergunta encontrada. Tente outra pesquisa ou categoria."
+    },
+    "additional": {
+      "title": "Tem mais perguntas?",
+      "text": "Não encontrou o que procurava? Entre em contato conosco diretamente e teremos prazer em ajudar com qualquer dúvida específica sobre nossos produtos e serviços.",
+      "button": "Enviar Mensagem"
+    },
+    "data": {
+      "1": {
+        "question": "Há quanto tempo vocês atuam no mercado?",
+        "answer": "Estamos no ramo desde 1999, com mais de 20 anos de experiência em suprimentos marítimos e serviços portuários. Nossa trajetória nos permitiu construir uma rede sólida de fornecedores e parceiros, garantindo a melhor qualidade e preços competitivos para nossos clientes."
+      },
+      "2": {
+        "question": "Quais benefícios de localização vocês oferecem?",
+        "answer": "Estamos estrategicamente em São Francisco do Sul, SC, facilitando o acesso aos portos de Paranaguá, Itajaí e Imbituba, reduzindo fretes e prazos de entrega. Nossa localização privilegiada nos permite atender com agilidade toda a costa sul e sudeste do Brasil, otimizando a logística e reduzindo custos operacionais."
+      },
+      "3": {
+        "question": "Vocês oferecem condições de pagamento especiais?",
+        "answer": "Sim. Para clientes com bom histórico, podemos oferecer crédito e condições diferenciadas. Também trabalhamos com cash & carry. Nosso departamento financeiro está sempre disponível para discutir as melhores opções de pagamento que se adequem às necessidades específicas de cada cliente e operação."
+      },
+      "4": {
+        "question": "E se eu precisar de ajuda extra com documentação?",
+        "answer": "Oferecemos suporte em trâmites de alfândega, liberação de cargas e demais documentos necessários para operações portuárias. Nossa equipe especializada possui ampla experiência em processos aduaneiros e está preparada para auxiliar em todas as etapas burocráticas, garantindo conformidade e agilidade nos processos."
+      },
+      "5": {
+        "question": "Quais são os principais produtos que vocês fornecem?",
+        "answer": "Fornecemos uma ampla gama de produtos, incluindo equipamentos de segurança, suprimentos de convés, materiais de limpeza, tintas marítimas, uniformes, equipamentos de combate a incêndio, entre outros. Nosso catálogo é constantemente atualizado para atender às demandas específicas do setor marítimo e portuário."
+      },
+      "6": {
+        "question": "Vocês atendem embarcações internacionais?",
+        "answer": "Sim, atendemos embarcações de todas as bandeiras que aportam nos portos brasileiros. Temos experiência em lidar com requisitos específicos de diferentes países e tipos de embarcações, garantindo que todos os suprimentos estejam em conformidade com as normas internacionais de navegação."
+      }
+    }
+  },
+  "contact": {
+    "header": {
+      "title": "Entre em <span class='text-[#00A3FF]'>Contato</span>",
+      "subtitle": "Estamos à disposição para atender suas necessidades. Entre em contato por qualquer um dos nossos canais."
+    },
+    "infoCard": {
+      "title": "Informações de Contato",
+      "phone": { "label": "Telefone", "value": "+55 (47) 98406-4678" },
+      "email": { "label": "Email", "value1": "ana@southwavesexportadora.com.br", "value2": "sales@southwavesexportadora.com.br" },
+      "address": { "label": "Endereço", "value": "São Francisco do Sul - Brazil" }
+    },
+    "differentialsCard": {
+      "title": "Nossos Diferenciais",
+      "items": [
+        "Localização estratégica entre os principais portos",
+        "Atendimento multilíngue disponível",
+        "Disponibilidade 24/7 para emergências",
+        "Atendemos embarcações de todas as bandeiras"
+      ]
+    },
+    "form": {
+      "title": "Envie sua Mensagem",
+      "description": "Preencha o formulário abaixo e nossa equipe entrará em contato o mais breve possível.",
+      "fields": {
+        "email": "Email",
+        "phone": "Telefone",
+        "company": "Empresa ou Nome do Navio",
+        "subject": "Assunto",
+        "message": "Sua Mensagem"
+      },
+      "placeholders": { "message": "Digite sua mensagem aqui..." },
+      "submit": "Enviar Mensagem",
+      "submitSuccess": "Mensagem enviada com sucesso!"
+    }
   },
   "footer": {
-    "logo_alt": "South Waves Serviços",
-    "description": "South Waves Serviços Marítimos e Terrestres, excelência em transporte de cargas, movimentação portuária, serviços terrestres e marítimos. Com mais de 20 anos de História.",
-    "services_title": "Serviços",
-    "service_transport": "Transporte de Cargas",
-    "service_port": "Movimentação Portuária",
-    "service_consulting": "Consultoria Logística",
-    "service_land_marine": "Serviços Terrestres e Marítimos",
+    "description": "Fornecendo suprimentos marítimos de qualidade para embarcações em todos os principais portos do Brasil desde 1999.",
+    "services_title": "Nossos Serviços",
+    "service_transport": "Suprimentos Marítimos",
+    "service_port": "Documentação",
+    "service_consulting": "Logística",
+    "service_land_marine": "Manutenção",
     "company_title": "Empresa",
     "about": "Sobre Nós",
     "contact": "Contato",
-    "clients": "Clientes",
-    "careers": "Trabalhe Conosco",
     "contact_title": "Contato",
-    "address": "Endereço: São Francisco do Sul, SC, Brasil",
+    "address": "São Francisco do Sul - SC - Brazil",
+    "quote_button": "Solicitar Cotação",
     "copyright": "© 2025 South Waves. Todos os direitos reservados.",
-    "developed_by": "Desenvolvido por"
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de Uso"
+  },
+  "menu": {
+    "home": "Home",
+    "about": "Sobre Nós",
+    "services": "Serviços",
+    "contact": "Contato",
+    "language": "Idioma / Language / 语言 [Beta]",
+    "submenu": {
+      "english": "English",
+      "portuguese": "Português",
+      "chinese": "中文"
+    }
+  },
+  "sisterCompany": {
+    "title": {
+      "pre": "Nossa",
+      "highlight": "Sister Company"
+    },
+    "name": "Galata",
+    "description": "Soluções marítimas complementares para atender todas as suas necessidades.",
+    "visitWebsite": "Visitar Website"
   }
 }

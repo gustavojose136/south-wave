@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link"
 import { useTranslation } from "react-i18next"
 import {
@@ -57,7 +59,7 @@ const Footer = () => {
               <p className="mb-8 text-gray-300 leading-relaxed">
                 {t(
                   "footer.description",
-                  "Fornecendo suprimentos marítimos de qualidade para embarcações em todos os principais portos do Brasil desde 1999.",
+                  "Fornecendo suprimentos marítimos de qualidade para embarcações em todos os principais portos do Brasil desde 1999."
                 )}
               </p>
 
@@ -170,7 +172,6 @@ const Footer = () => {
                     {t("footer.contact", "Contato")}
                   </Link>
                 </li>
-                
               </ul>
             </div>
           </div>
@@ -221,27 +222,9 @@ const Footer = () => {
               <div className="mt-8">
                 <Link
                   href="/contact"
-                  className="
-                    inline-flex 
-                    items-center 
-                    justify-center 
-                    rounded-xl 
-                    bg-[#00A3FF]
-                    hover:bg-[#0088D1]
-                    px-6 
-                    py-3
-                    text-sm 
-                    font-medium 
-                    text-white
-                    shadow-lg
-                    shadow-[#00A3FF]/20
-                    transition-all
-                    duration-300
-                    transform
-                    hover:-translate-y-1
-                  "
+                  className="inline-flex items-center justify-center rounded-xl bg-[#00A3FF] hover:bg-[#0088D1] px-6 py-3 text-sm font-medium text-white shadow-lg shadow-[#00A3FF]/20 transition-all duration-300 transform hover:-translate-y-1"
                 >
-                  Solicitar Cotação
+                  {t("footer.quote_button", "Solicitar Cotação")}
                   <ExternalLink className="ml-2 w-4 h-4" />
                 </Link>
               </div>
@@ -264,10 +247,13 @@ const Footer = () => {
                 href="/privacy"
                 className="text-gray-400 hover:text-[#00A3FF] text-sm transition-colors duration-300"
               >
-                Política de Privacidade
+                {t("footer.privacy", "Política de Privacidade")}
               </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-[#00A3FF] text-sm transition-colors duration-300">
-                Termos de Uso
+              <Link
+                href="/terms"
+                className="text-gray-400 hover:text-[#00A3FF] text-sm transition-colors duration-300"
+              >
+                {t("footer.terms", "Termos de Uso")}
               </Link>
             </div>
           </div>
@@ -278,4 +264,3 @@ const Footer = () => {
 }
 
 export default Footer
-
