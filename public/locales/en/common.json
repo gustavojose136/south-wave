@@ -1,430 +1,446 @@
 {
   "hero": {
-    "badge": "自1999年以来",
+    "badge": "Since 1999",
     "title": {
       "main": "South Waves",
-      "highlight": "船舶供应"
+      "highlight": "Ship Supply"
     },
-    "tagline": "您所需要的，我们都供应！",
-    "description": "选择 South Waves，您的企业将获得质量有保证的产品和服务。我们以卓越为优先，不断追求最佳解决方案。",
+    "tagline": "Whatever you need, we supply it!",
+    "description": "With South Waves, your company is guaranteed quality products and services. We prioritize excellence and are continuously seeking the best solutions.",
     "buttons": {
-      "seeProducts": "查看产品",
-      "requestQuote": "请求报价"
+      "seeProducts": "View Products",
+      "requestQuote": "Request Quote"
     }
   },
   "about": {
-    "heading": "关于 South Waves",
-    "description": "选择 South Waves，您的企业将获得质量有保证的产品和服务。我们以卓越为优先，不断追求最佳解决方案。",
+    "heading": "About South Waves",
+    "description": "With South Waves, your company is guaranteed quality products and services. We prioritize excellence and are continuously seeking the best solutions.",
     "companyValues": {
       "safetyFirst": {
-        "title": "安全第一",
-        "description": "安全是我们所有运营中不容置疑的价值。"
+        "title": "Safety First",
+        "description": "Safety is an unquestionable value in all our operations."
       },
       "strategicLocation": {
-        "title": "战略位置",
-        "description": "位于巴西南部主要港口之间。"
+        "title": "Strategic Location",
+        "description": "Positioned among the main ports in southern Brazil."
       },
       "agility": {
-        "title": "敏捷",
-        "description": "快速响应，按时交付满足您的需求。"
+        "title": "Agility",
+        "description": "Quick responses and on-time deliveries for your needs."
       },
       "certifiedQuality": {
-        "title": "质量认证",
-        "description": "产品和服务均符合国际标准。"
+        "title": "Certified Quality",
+        "description": "Products and services that meet international standards."
       }
     },
-    "locationDescription": "我们位于圣弗朗西斯科杜苏尔（São Francisco do Sul, SC），靠近 Paranaguá、Itajaí 和 Imbituba，确保物流便捷、运输距离缩短及供应更迅速。",
-    "contactButton": "联系我们",
+    "locationDescription": "We are strategically located in São Francisco do Sul, SC, between Paranaguá, Itajaí, and Imbituba. This ensures logistical ease, reduced travel distances, and increased agility for your supplies.",
+    "contactButton": "Contact Us",
     "experience": {
       "years": "20+",
-      "text": "年经验"
+      "text": "Years of Experience"
     },
-    "backgroundAlt": "港口背景图片",
-    "featuredImageAlt": "港口与物流"
+    "backgroundAlt": "Port background image",
+    "featuredImageAlt": "Port and logistics"
   },
   "whyChooseUs": {
-    "title": "为什么选择 South Waves？",
-    "subtitle": "了解使我们成为您海事与港口业务最佳选择的不同之处。",
+    "title": "Why Choose South Waves?",
+    "subtitle": "Understand the differences that make us the best choice for your maritime and port business.",
     "stats": {
-      "stat1": { "label": "年经验" },
-      "stat2": { "label": "满意客户" },
-      "stat3": { "label": "服务港口" },
-      "stat4": { "label": "满意率" }
+      "stat1": { "label": "Years of Experience" },
+      "stat2": { "label": "Satisfied Clients" },
+      "stat3": { "label": "Ports Served" },
+      "stat4": { "label": "Satisfaction Rate" }
     },
     "benefits": {
       "progressiveDiscounts": {
-        "title": "阶梯折扣",
-        "content": "订单越大，折扣越高。我们提供根据您运营量调整的特殊优惠。"
+        "title": "Progressive Discounts",
+        "content": "The larger the order, the greater the discount. We offer special conditions that adapt to the volume of your operation."
       },
       "multiplePaymentOptions": {
-        "title": "多种支付方式",
-        "content": "我们提供信用、公司支付以及信用卡支付，方便您的交易。"
+        "title": "Multiple Payment Options",
+        "content": "We offer credit, company payment, and credit card payment to facilitate your transactions."
       },
       "flexiblePrices": {
-        "title": "灵活定价",
-        "content": "我们的价格始终灵活，可根据您的需求调整。价格非常实惠。"
+        "title": "Flexible Prices",
+        "content": "Our prices are always flexible and adaptable to your needs. They are very accommodating."
       },
       "personalizedService": {
-        "title": "个性化服务",
-        "content": "如有任何额外需求，请联系我们。我们灵活应对，提供定制解决方案。"
+        "title": "Personalized Service",
+        "content": "For any additional needs, please get in touch. We are flexible and ready to offer tailor-made solutions."
       }
     },
     "testimonial": {
-      "title": "卓越认证",
-      "content": "WA South Waves 是我们超过10年的可靠合作伙伴。他们对质量的承诺、灵活的支付方式及准时性在海事行业中无可比拟。",
-      "author": "— Roberto Silva船长，海事运营总监"
+      "title": "Certification of Excellence",
+      "content": "WA South Waves has been our trusted partner for over 10 years. Their commitment to quality, payment flexibility, and punctuality is unmatched in the maritime sector.",
+      "author": "— Captain Roberto Silva, Director of Maritime Operations"
     },
-    "cta": "立即联系我们"
+    "cta": "Contact Us Now"
   },
   "services": {
     "header": {
-      "badge": "我们的服务",
+      "badge": "Our Services",
       "title": {
-        "main": "为您提供完整解决方案",
-        "highlight": "海军补给"
+        "main": "Complete Solutions for",
+        "highlight": "Naval Replenishment"
       },
-      "description": "我们提供专业服务，确保您的船舶在恰当的时间收到正确的部件，最大限度减少停机时间。"
+      "description": "We offer specialized services to ensure that your vessel receives the right parts at the right time, minimizing downtime."
     },
     "serviceList": {
       "service1": {
-        "title": "原装部件供应",
-        "description": "我们为各种船舶提供原装和认证的部件，确保组件的真实性和质量。",
-        "features": ["具有原产地认证的部件", "厂家保修", "全程可追溯"]
+        "title": "Supply of Original Parts",
+        "description": "We supply original and approved parts for all types of vessels, ensuring authenticity and quality of components.",
+        "features": [
+          "Parts with origin certification",
+          "Manufacturer's warranty",
+          "Complete traceability"
+        ]
       },
       "service2": {
-        "title": "快速快递",
-        "description": "针对紧急部件提供快速快递服务，适用于巴西任何港口，最大限度减少船舶停机时间。",
-        "features": ["24-48小时内送达", "实时跟踪", "24/7紧急服务"]
+        "title": "Express Delivery",
+        "description": "Express delivery service for urgent parts at any port in Brazil, minimizing your vessel's downtime.",
+        "features": [
+          "Delivery in 24-48h",
+          "Real-time tracking",
+          "24/7 emergency service"
+        ]
       },
       "service3": {
-        "title": "专业技术支持",
-        "description": "我们的技术团队提供支持，帮助识别和选择适合您船舶的部件。",
-        "features": ["专业技术咨询", "精准部件识别", "替换建议"]
+        "title": "Specialized Technical Support",
+        "description": "Our technical team provides support in identifying and selecting the correct parts for your vessel.",
+        "features": [
+          "Specialized technical consultancy",
+          "Accurate component identification",
+          "Replacement recommendations"
+        ]
       },
       "service4": {
-        "title": "文件与认证",
-        "description": "我们提供所有关键部件所需的文件，确保符合海事规定。",
-        "features": ["合规证书", "给船级社的文件", "测试和质量报告"]
+        "title": "Documentation and Certification",
+        "description": "We provide all the necessary documentation for critical parts, ensuring compliance with maritime regulations.",
+        "features": [
+          "Compliance certificates",
+          "Documentation for classification societies",
+          "Test and quality reports"
+        ]
       }
     },
-    "premiumBadge": "高级服务",
+    "premiumBadge": "Premium Service",
     "emergency": {
-      "badge": "24/7服务",
-      "title": "关键部件紧急补给服务",
-      "description": "我们了解船舶停机会产生巨大成本。因此，我们在巴西任何港口提供全天候24/7的紧急服务，供应并配送关键部件。",
+      "badge": "24/7 Service",
+      "title": "Emergency Service for Critical Parts Replenishment",
+      "description": "We understand that vessel downtime represents significant costs. Therefore, we offer a 24/7 emergency service for the supply and delivery of critical parts at any port in Brazil.",
       "features": [
-        "快速识别关键部件",
-        "24小时内快速送达",
-        "专业技术支持",
-        "紧急热线直通"
+        "Rapid identification of critical parts",
+        "Express delivery within 24h",
+        "Specialized technical support",
+        "Direct line for emergencies"
       ],
-      "cta": "紧急联系"
+      "cta": "Emergency Contact"
     }
   },
   "products": {
     "header": {
-      "badge": "完整目录",
+      "badge": "Complete Catalog",
       "title": {
-        "main": "我们的",
-        "highlight": "产品",
-        "suffix": " & 服务"
+        "main": "Our",
+        "highlight": "Products",
+        "suffix": " & Services"
       },
-      "tagline": "您说了算，我们供应！",
-      "description": "我们提供广泛的高质量海事产品，以满足您船舶的所有需求。"
+      "tagline": "You name it, we supply it!",
+      "description": "We provide a wide range of high-quality maritime products to meet all your vessel's needs."
     },
     "search": {
-      "placeholder": "搜索产品..."
+      "placeholder": "Search products..."
     },
     "categories": {
-      "all": "所有产品",
-      "deck": "甲板与外部",
-      "personal": "个人使用",
-      "accommodation": "住宿",
-      "maintenance": "清洁与维护",
-      "technical": "技术",
-      "safety": "安全",
-      "office": "办公",
-      "food": "食品"
+      "all": "All Products",
+      "deck": "Deck & Exterior",
+      "personal": "Personal Use",
+      "accommodation": "Accommodations",
+      "maintenance": "Cleaning & Maintenance",
+      "technical": "Technical",
+      "safety": "Safety",
+      "office": "Office",
+      "food": "Food"
     },
     "results": {
-      "singular": "产品找到",
-      "plural": "产品找到"
+      "singular": "product found",
+      "plural": "products found"
     },
     "noResults": {
-      "title": "未找到产品",
-      "description": "请尝试调整您的筛选条件或搜索关键词。",
-      "button": "清除筛选"
+      "title": "No product found",
+      "description": "Try adjusting your filters or search terms.",
+      "button": "Clear Filters"
     },
     "cta": {
-      "title": "没找到您正需要的？",
-      "description": "我们提供各种产品，并随时准备帮助您找到所需。请与我们的团队联系，获得个性化支持。",
-      "button": "请求个性报价"
+      "title": "Didn't find exactly what you need?",
+      "description": "We work with a wide variety of products and are ready to help you find exactly what you're looking for. Talk to our team and receive personalized support for your needs.",
+      "button": "Request Personalized Quote"
     },
     "productCard": {
-      "featured": "精选",
-      "button": "查看详情"
+      "featured": "Featured",
+      "button": "View Details"
     },
     "productData": {
       "product1": {
         "title": "Hatch Cover Tapes",
-        "description": "高品质舱盖密封胶带，确保气密性和防风雨保护。"
+        "description": "High-quality hatch cover tapes for hermetic sealing and protection against weather."
       },
       "product2": {
         "title": "Private for the Crew",
-        "description": "为船员提供的个人用品，包括卫生和舒适用品。"
+        "description": "Personal use products for sailors, including hygiene and comfort items."
       },
       "product3": {
         "title": "Cabin Stores",
-        "description": "客舱用品，包括床上用品、毛巾及其他舒适物品。"
+        "description": "Cabin supplies, including bedding, towels, and comfort items."
       },
       "product4": {
         "title": "Galley Stores",
-        "description": "船舶厨房设备及器具。"
+        "description": "Equipment and utensils for vessel kitchens."
       },
       "product5": {
         "title": "Cleaning Material",
-        "description": "适用于船舶各区域的工业和海事清洁产品。"
+        "description": "Industrial and maritime cleaning products for all areas of the vessel."
       },
       "product6": {
         "title": "Chemical Gases",
-        "description": "用于船舶工业及运营的化学气体。"
+        "description": "Chemical gases for industrial and operational use on vessels."
       },
       "product7": {
         "title": "Pyrotechnics",
-        "description": "认证的海事信号及紧急用烟火器材。"
+        "description": "Maritime-certified pyrotechnics and signaling devices for emergencies."
       },
       "product8": {
         "title": "Stationery",
-        "description": "用于文件及行政操作的办公用品。"
+        "description": "Office supplies and stationery for documentation and administrative operations."
       },
       "product9": {
         "title": "Computing",
-        "description": "船上使用的电脑设备及用品。"
+        "description": "Computing equipment and supplies for onboard operations."
       },
       "product10": {
         "title": "Safety Equipment",
-        "description": "高质量认证的安全设备。"
+        "description": "High-quality, certified safety equipment."
       },
       "product11": {
         "title": "Provisions",
-        "description": "长途航行所需的食品及必备供应品。"
+        "description": "Food and essential supplies for long-duration voyages."
       },
       "product12": {
         "title": "Bonded",
-        "description": "适用于船舶的关税特殊制度下的饮料及产品。"
+        "description": "Beverages and products under special customs regime for vessels."
       }
     }
   },
   "culturalProducts": {
     "hero": {
-      "badge": "优质清真牛肉",
+      "badge": "Premium Halal Beef",
       "title": {
-        "part1": "清真",
-        "highlight": "牛肉",
-        "part2": "最高品质"
+        "part1": "Meat",
+        "highlight": "Halal",
+        "part2": "of the Highest Quality"
       },
-      "description": "我们提供优质清真牛肉，严格遵循伊斯兰传统。每一块牛肉都经过精心挑选和认证，确保卓越品质并符合您的信仰原则。",
-      "featureBadges": ["100%认证", "传统屠宰", "优质品质"],
-      "buttonSolicitarAgora": "立即请求",
-      "buttonVerCortes": "查看可选切块",
-      "imageAlt": "优质清真牛肉",
-      "overlayTitle": "保证清真认证",
-      "overlayDescription": "我们的牛肉在整个过程中严格遵循伊斯兰原则，从屠宰到包装，确保完全符合清真要求。"
+      "description": "We offer premium Halal beef, prepared with the utmost respect for Islamic traditions. Each cut is carefully selected and certified, ensuring exceptional quality and compliance with the principles of your faith.",
+      "featureBadges": [
+        "100% Certified",
+        "Traditional Slaughter",
+        "Premium Quality"
+      ],
+      "buttonSolicitarAgora": "Request Now",
+      "buttonVerCortes": "View Available Cuts",
+      "imageAlt": "Premium Halal Beef",
+      "overlayTitle": "Guaranteed Halal Certification",
+      "overlayDescription": "Our beef strictly follows Islamic principles throughout the process, from slaughter to packaging, ensuring full compliance with Halal requirements."
     },
     "features": {
-      "title": "为何选择我们的清真牛肉",
-      "description": "我们致力于卓越并尊重传统，提供符合最高质量和宗教标准的清真牛肉。",
+      "title": "Why Choose Our Halal Beef",
+      "description": "Committed to excellence and respect for traditions, we offer Halal beef that meets the highest standards of quality and religious compliance.",
       "halalFeatures": [
         {
-          "title": "100%认证",
-          "description": "由公认的伊斯兰权威机构保证清真认证"
+          "title": "100% Certified",
+          "description": "Halal certification guaranteed by recognized Islamic authorities"
         },
         {
-          "title": "优质品质",
-          "description": "高品质牛肉，来源于精心饲养的牲畜"
+          "title": "Premium Quality",
+          "description": "High-quality meat from animals raised with the best care"
         },
         {
-          "title": "特别切块",
-          "description": "根据伊斯兰传统准备的多种切块"
+          "title": "Special Cuts",
+          "description": "Variety of cuts prepared according to Islamic traditions"
         },
         {
-          "title": "尊重传统",
-          "description": "屠宰过程完全尊重伊斯兰原则"
+          "title": "Respect for Traditions",
+          "description": "Slaughter performed with full respect to Islamic principles"
         }
       ]
     },
     "beefCuts": {
-      "title": "可选优质切块",
-      "description": "我们提供精选优质清真牛肉切块，严格按照伊斯兰传统精心制作。",
+      "title": "Available Premium Cuts",
+      "description": "We offer a selection of premium Halal beef cuts, prepared with care and respect for Islamic traditions.",
       "items": [
         {
-          "name": "清真菲力牛排",
-          "description": "上等嫩滑的切块，适合特殊场合",
-          "price": "面议"
+          "name": "Halal Filet Mignon",
+          "description": "A noble and tender cut, perfect for special occasions",
+          "price": "On request"
         },
         {
-          "name": "清真牛臀肉",
-          "description": "多汁且带有特征性脂肪层的切块",
-          "price": "面议"
+          "name": "Halal Picanha",
+          "description": "Juicy cut with a characteristic fat cap",
+          "price": "On request"
         },
         {
-          "name": "清真牛肋排",
-          "description": "适合慢炖，风味浓郁",
-          "price": "面议"
+          "name": "Halal Beef Ribs",
+          "description": "Ideal for slow and flavorful cooking",
+          "price": "On request"
         }
       ],
-      "badge": "清真认证",
-      "button": "请求"
+      "badge": "Halal Certified",
+      "button": "Request"
     },
     "certification": {
-      "title": "保证清真认证",
-      "description": "我们的清真牛肉由公认的伊斯兰权威机构认证，确保从饲养到屠宰加工的全过程严格遵循伊斯兰原则。您可以信赖我们每一块切块的真实性和质量。",
+      "title": "Guaranteed Halal Certification",
+      "description": "Our Halal beef is certified by recognized Islamic authorities, ensuring that the entire process—from raising the animals to slaughter and processing—strictly follows Islamic principles. You can trust the authenticity and quality of every cut we offer.",
       "certifications": [
         {
-          "title": "FAMBRAS证书",
-          "description": "巴西穆斯林协会联合会",
+          "title": "FAMBRAS Certificate",
+          "description": "Federation of Muslim Associations of Brazil",
           "image": "/images/certificados/FAMBRAS.png"
         },
         {
-          "title": "CDIAL HALAL证书",
-          "description": "拉美伊斯兰传播中心",
+          "title": "CDIAL HALAL Certificate",
+          "description": "Center for the Dissemination of Islam in Latin America",
           "image": "/images/certificados/CDIAL-HALAL.png"
         }
       ]
     },
     "cta": {
-      "title": "准备尝试我们的清真牛肉了吗？",
-      "description": "今天就联系我们，获取我们的优质清真牛肉切块。我们保证质量、真实性，并完全尊重您的传统。",
-      "button": "请求清真牛肉"
+      "title": "Ready to Try Our Halal Beef?",
+      "description": "Contact us today to request our premium Halal beef cuts. We guarantee quality, authenticity, and full respect for your traditions.",
+      "button": "Request Halal Beef"
     }
   },
   "faq": {
     "header": {
-      "title": "常见问题及其他优势",
-      "subtitle": "解答您的疑问，并了解我们如何帮助您的业务。"
+      "title": "FAQ & Other Advantages",
+      "subtitle": "Clear your doubts and learn more about how we can help your business."
     },
     "search": {
-      "placeholder": "搜索问题..."
+      "placeholder": "Search questions..."
     },
     "categories": {
-      "all": "全部",
-      "empresa": "关于公司",
-      "logistica": "物流",
-      "financeiro": "财务",
-      "documentacao": "文件",
-      "produtos": "产品",
-      "servicos": "服务"
+      "all": "All",
+      "empresa": "About the Company",
+      "logistica": "Logistics",
+      "financeiro": "Finance",
+      "documentacao": "Documentation",
+      "produtos": "Products",
+      "servicos": "Services"
     },
     "noResults": {
-      "text": "未找到任何问题，请尝试其他搜索或类别。"
+      "text": "No questions found. Try another search or category."
     },
     "additional": {
-      "title": "还有其他疑问？",
-      "text": "没有找到您所需要的？请直接联系我们，我们乐意帮助解答您对我们产品和服务的任何具体问题。",
-      "button": "发送信息"
+      "title": "Have more questions?",
+      "text": "Didn't find what you were looking for? Contact us directly and we will be happy to help with any specific questions about our products and services.",
+      "button": "Send Message"
     },
     "data": {
       "1": {
-        "question": "你们在市场上经营多久了？",
-        "answer": "我们自1999年以来就开始经营，拥有超过20年的海事供应和港口服务经验。我们的发展历程让我们建立了坚实的供应商和合作伙伴网络，确保为客户提供最佳质量和具竞争力的价格。"
+        "question": "How long have you been in the market?",
+        "answer": "We have been in the industry since 1999, with over 20 years of experience in maritime supplies and port services. Our journey has allowed us to build a solid network of suppliers and partners, ensuring the best quality and competitive prices for our customers."
       },
       "2": {
-        "question": "你们提供哪些地理位置优势？",
-        "answer": "我们位于圣弗朗西斯科杜苏尔（São Francisco do Sul, SC），便于前往 Paranaguá、Itajaí 和 Imbituba港口，降低运费及交货时间。我们得天独厚的位置使我们能够迅速服务巴西南部和东南部海岸，优化物流并降低运营成本。"
+        "question": "What location benefits do you offer?",
+        "answer": "We are strategically located in São Francisco do Sul, SC, facilitating access to the ports of Paranaguá, Itajaí, and Imbituba, reducing freight and delivery times. Our privileged location allows us to serve the entire southern and southeastern coast of Brazil with agility, optimizing logistics and reducing operational costs."
       },
       "3": {
-        "question": "你们提供特殊支付条件吗？",
-        "answer": "是的，对于信誉良好的客户，我们可以提供信用和差异化的支付条件。我们也接受现购现卖。我们的财务部门始终愿意讨论最适合每位客户和各类运营需求的支付方案。"
+        "question": "Do you offer special payment terms?",
+        "answer": "Yes. For customers with a good track record, we can offer credit and differentiated terms. We also work with cash & carry. Our finance department is always available to discuss the best payment options to suit the specific needs of each customer and operation."
       },
       "4": {
-        "question": "如果我需要额外的文件协助怎么办？",
-        "answer": "我们提供海关手续、货物放行及港口运营所需文件的支持。我们的专业团队在海关流程方面拥有丰富经验，能够在每个繁琐环节中提供协助，确保合规和高效。"
+        "question": "What if I need extra help with documentation?",
+        "answer": "We offer support in customs procedures, cargo clearance, and all necessary documentation for port operations. Our specialized team has extensive experience in customs processes and is ready to assist in all bureaucratic stages, ensuring compliance and efficiency."
       },
       "5": {
-        "question": "你们主要供应哪些产品？",
-        "answer": "我们提供广泛的产品，包括安全设备、甲板用品、清洁材料、海事涂料、工作服、防火设备等。我们的产品目录不断更新，以满足海事和港口行业的特定需求。"
+        "question": "What are the main products you supply?",
+        "answer": "We supply a wide range of products, including safety equipment, deck supplies, cleaning materials, marine paints, uniforms, fire-fighting equipment, among others. Our catalog is constantly updated to meet the specific demands of the maritime and port sector."
       },
       "6": {
-        "question": "你们是否为国际船舶服务？",
-        "answer": "是的，我们服务所有停靠巴西港口的各国船舶。我们拥有应对不同国家和各类船舶特定要求的经验，确保所有供应品均符合国际航行标准。"
+        "question": "Do you serve international vessels?",
+        "answer": "Yes, we serve vessels of all flags that dock at Brazilian ports. We have experience in dealing with specific requirements from different countries and types of vessels, ensuring that all supplies comply with international navigation standards."
       }
     }
   },
   "contact": {
     "header": {
-      "title": "联系我们 <span class='text-[#00A3FF]'>立即</span>",
-      "subtitle": "我们随时为您服务，请通过任一渠道联系我们。"
+      "title": "Get in <span class='text-[#00A3FF]'>Touch</span>",
+      "subtitle": "We are available to meet your needs. Contact us through any of our channels."
     },
     "infoCard": {
-      "title": "联系信息",
-      "phone": { "label": "电话", "value": "+55 (47) 98406-4678" },
-      "email": {
-        "label": "电子邮箱",
-        "value1": "ana@southwavesexportadora.com.br",
-        "value2": "sales@southwavesexportadora.com.br"
-      },
-      "address": { "label": "地址", "value": "São Francisco do Sul - Brazil" }
+      "title": "Contact Information",
+      "phone": { "label": "Phone", "value": "+55 (47) 98406-4678" },
+      "email": { "label": "Email", "value1": "ana@southwavesexportadora.com.br", "value2": "sales@southwavesexportadora.com.br" },
+      "address": { "label": "Address", "value": "São Francisco do Sul - Brazil" }
     },
     "differentialsCard": {
-      "title": "我们的优势",
+      "title": "Our Differentiators",
       "items": [
-        "位于主要港口之间的战略位置",
-        "提供多语言服务",
-        "24/7紧急响应",
-        "服务所有国籍船舶"
+        "Strategic location among the main ports",
+        "Multilingual service available",
+        "24/7 availability for emergencies",
+        "We serve vessels of all flags"
       ]
     },
     "form": {
-      "title": "发送您的信息",
-      "description": "填写下列表格，我们的团队将尽快与您联系。",
+      "title": "Send Your Message",
+      "description": "Fill out the form below and our team will get in touch as soon as possible.",
       "fields": {
-        "email": "电子邮箱",
-        "phone": "电话",
-        "company": "公司或船名",
-        "subject": "主题",
-        "message": "您的信息"
+        "email": "Email",
+        "phone": "Phone",
+        "company": "Company or Ship Name",
+        "subject": "Subject",
+        "message": "Your Message"
       },
-      "placeholders": { "message": "在此输入您的信息..." },
-      "submit": "发送信息",
-      "submitSuccess": "信息发送成功！"
+      "placeholders": { "message": "Type your message here..." },
+      "submit": "Send Message",
+      "submitSuccess": "Message sent successfully!"
     }
   },
   "footer": {
-    "description": "自1999年以来，为巴西所有主要港口的船舶提供高质量海事供应。",
-    "services_title": "我们的服务",
-    "service_transport": "海事供应",
-    "service_port": "文件处理",
-    "service_consulting": "物流",
-    "service_land_marine": "维护",
-    "company_title": "公司",
-    "about": "关于我们",
-    "contact": "联系",
-    "contact_title": "联系",
+    "description": "Providing quality maritime supplies for vessels at all the main ports in Brazil since 1999.",
+    "services_title": "Our Services",
+    "service_transport": "Maritime Supplies",
+    "service_port": "Documentation",
+    "service_consulting": "Logistics",
+    "service_land_marine": "Maintenance",
+    "company_title": "Company",
+    "about": "About Us",
+    "contact": "Contact",
+    "contact_title": "Contact",
     "address": "São Francisco do Sul - SC - Brazil",
-    "quote_button": "请求报价",
-    "copyright": "© 2025 South Waves. 保留所有权利。",
-    "privacy": "隐私政策",
-    "terms": "使用条款"
+    "quote_button": "Request Quote",
+    "copyright": "© 2025 South Waves. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use"
   },
   "menu": {
-    "home": "首页",
-    "about": "关于我们",
-    "services": "服务",
-    "contact": "联系",
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "contact": "Contact",
     "language": "Idioma / Language / 语言 [Beta]",
     "submenu": {
       "english": "English",
-      "portuguese": "Português",
-      "chinese": "中文"
+      "portuguese": "Portuguese",
+      "chinese": "Chinese"
     }
   },
   "sisterCompany": {
     "title": {
-      "pre": "我们的",
-      "highlight": "姐妹公司"
+      "pre": "Our",
+      "highlight": "Sister Company"
     },
     "name": "Galata",
-    "description": "提供补充海事解决方案，以满足您所有需求。",
-    "visitWebsite": "访问网站"
+    "description": "Complementary maritime solutions to meet all your needs.",
+    "visitWebsite": "Visit Website"
   }
 }
