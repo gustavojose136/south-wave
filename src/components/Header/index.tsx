@@ -1,68 +1,84 @@
-"use client"
+"use client";
 
-import { useSession } from "next-auth/react"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { useEffect, useState } from "react"
-import { useTranslation } from "react-i18next"
-import { Icon } from "@iconify/react"
-import { Ship, ChevronDown, Menu, X } from "lucide-react"
+import { useSession } from "next-auth/react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { Icon } from "@iconify/react";
+import { Ship, ChevronDown, Menu, X } from "lucide-react";
+import Image from "next/image"
 
-import menuData from "./menuData"
+import menuData from "./menuData";
 
 const Header = () => {
-  const { data: session } = useSession()
-  const { i18n, t } = useTranslation()
-  const pathUrl = usePathname()
+  const { data: session } = useSession();
+  const { i18n, t } = useTranslation();
+  const pathUrl = usePathname();
 
-  const [navbarOpen, setNavbarOpen] = useState(false)
+  const [navbarOpen, setNavbarOpen] = useState(false);
   const navbarToggleHandler = () => {
-    setNavbarOpen(!navbarOpen)
-  }
-  
-  const [sticky, setSticky] = useState(false)
+    setNavbarOpen(!navbarOpen);
+  };
+
+  const [sticky, setSticky] = useState(false);
   const handleStickyNavbar = () => {
     if (window.scrollY >= 80) {
-      setSticky(true)
+      setSticky(true);
     } else {
-      setSticky(false)
+      setSticky(false);
     }
-  }
+  };
   useEffect(() => {
-    window.addEventListener("scroll", handleStickyNavbar)
+    window.addEventListener("scroll", handleStickyNavbar);
     return () => {
-      window.removeEventListener("scroll", handleStickyNavbar)
-    }
-  }, [])
+      window.removeEventListener("scroll", handleStickyNavbar);
+    };
+  }, []);
 
-  const [openIndex, setOpenIndex] = useState(-1)
+  const [openIndex, setOpenIndex] = useState(-1);
   const handleSubmenu = (index: number) => {
-    setOpenIndex(openIndex === index ? -1 : index)
-  }
+    setOpenIndex(openIndex === index ? -1 : index);
+  };
 
   const handleLanguageChange = (lng: string) => {
-    i18n.changeLanguage(lng)
-  }
+    i18n.changeLanguage(lng);
+  };
 
   const stickyClasses = sticky
     ? "fixed z-[999] w-full border-b border-[#00A3FF]/20 bg-gradient-to-r from-[#1A2129] to-[#2D3339] backdrop-blur-md shadow-lg shadow-black/10"
-    : "absolute bg-transparent w-full"
+    : "absolute bg-transparent w-full";
 
   return (
-    <header className={`left-0 top-0 z-40 flex items-center transition-all duration-300 ${stickyClasses}`}>
+    <header
+      className={`left-0 top-0 z-40 flex items-center transition-all duration-300 ${stickyClasses}`}
+    >
       <div className="container mx-auto px-4">
         <div className="relative -mx-4 flex items-center justify-between">
           {/* LOGO */}
           <div className="w-60 max-w-full px-4">
-            <Link href="/" className={`flex items-center gap-3 ${sticky ? "py-3" : "py-5"}`}>
-              <div
+            <Link
+              href="/"
+              className={`flex items-center gap-3 ${sticky ? "py-3" : "py-5"}`}
+            >
+              {/* <div
                 className={`bg-[#00A3FF] p-2 rounded-lg transition-all duration-300 ${sticky ? "shadow-md shadow-[#00A3FF]/20" : ""}`}
               >
                 <Ship className="w-6 h-6 text-white" />
               </div>
               <span className="text-xl font-bold text-white">
                 South <span className="text-[#00A3FF]">Waves</span>
-              </span>
+              </span> */}
+              <div className={`rounded-lg `}>
+                {/* <Ship className="w-6 h-6 text-white" /> */}
+                <Image
+                  src="/images/logo/logo.svg"
+                  alt="Logo South Waves"
+                  width={350}
+                  height={100}
+                  className="w-30 h-10"
+                />
+              </div>
             </Link>
           </div>
 
@@ -88,7 +104,11 @@ const Header = () => {
                   lg:hidden
                 "
               >
-                {navbarOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
+                {navbarOpen ? (
+                  <X className="h-6 w-6 text-white" />
+                ) : (
+                  <Menu className="h-6 w-6 text-white" />
+                )}
               </button>
 
               {/* NAVBAR */}
@@ -106,9 +126,9 @@ const Header = () => {
                   bg-[#1A2129]/95
                   px-6
                   py-4
-                  duration-300
                   shadow-xl
                   backdrop-blur-md
+                  duration-300
                   lg:visible
                   lg:static
                   lg:w-auto
@@ -129,6 +149,7 @@ const Header = () => {
                           onClick={() => handleSubmenu(index)}
                           className={`
                             flex
+                            w-full
                             items-center
                             justify-between
                             py-3
@@ -137,18 +158,21 @@ const Header = () => {
                             transition-colors
                             hover:text-[#00A3FF]
                             lg:inline-flex
+                            lg:w-auto
                             lg:px-0
                             lg:py-6
-                            w-full
-                            lg:w-auto
                           `}
                         >
                           <div className="flex items-center gap-2">
-                            {menuItem.icon && <Icon icon={menuItem.icon} className="text-xl" />}
-                            {menuItem.title.startsWith("menu.") ? t(menuItem.title) : menuItem.title}
+                            {menuItem.icon && (
+                              <Icon icon={menuItem.icon} className="text-xl" />
+                            )}
+                            {menuItem.title.startsWith("menu.")
+                              ? t(menuItem.title)
+                              : menuItem.title}
                           </div>
                           <ChevronDown
-                            className={`w-4 h-4 ml-1 transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""} lg:group-hover:rotate-180`}
+                            className={`ml-1 h-4 w-4 transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""} lg:group-hover:rotate-180`}
                           />
                         </button>
 
@@ -160,9 +184,9 @@ const Header = () => {
                             top-full
                             w-full
                             rounded-xl
-                            bg-[#2D3339]
                             border
                             border-[#00A3FF]/20
+                            bg-[#2D3339]
                             p-4
                             transition-all
                             duration-300
@@ -183,7 +207,9 @@ const Header = () => {
                             submenuItem.action ? (
                               <button
                                 key={i}
-                                onClick={() => handleLanguageChange(submenuItem.action ?? "")}
+                                onClick={() =>
+                                  handleLanguageChange(submenuItem.action ?? "")
+                                }
                                 className="
                                   block
                                   w-full
@@ -193,13 +219,15 @@ const Header = () => {
                                   text-left
                                   text-sm
                                   text-white
-                                  hover:bg-[#00A3FF]/10
-                                  hover:text-[#00A3FF]
                                   transition-colors
                                   duration-200
+                                  hover:bg-[#00A3FF]/10
+                                  hover:text-[#00A3FF]
                                 "
                               >
-                                {submenuItem.title.startsWith("menu.") ? t(submenuItem.title) : submenuItem.title}
+                                {submenuItem.title.startsWith("menu.")
+                                  ? t(submenuItem.title)
+                                  : submenuItem.title}
                               </button>
                             ) : (
                               <Link
@@ -214,14 +242,16 @@ const Header = () => {
                                   text-left
                                   text-sm
                                   text-white
-                                  hover:bg-[#00A3FF]/10
-                                  hover:text-[#00A3FF]
                                   transition-colors
                                   duration-200
+                                  hover:bg-[#00A3FF]/10
+                                  hover:text-[#00A3FF]
                                 "
                                 onClick={() => setNavbarOpen(false)}
                               >
-                                {submenuItem.title.startsWith("menu.") ? t(submenuItem.title) : submenuItem.title}
+                                {submenuItem.title.startsWith("menu.")
+                                  ? t(submenuItem.title)
+                                  : submenuItem.title}
                               </Link>
                             ),
                           )}
@@ -234,6 +264,7 @@ const Header = () => {
                           href={menuItem.path || "#"}
                           className={`
                             flex
+                            w-full
                             items-center
                             gap-2
                             py-3
@@ -242,15 +273,18 @@ const Header = () => {
                             transition-colors
                             hover:text-[#00A3FF]
                             lg:inline-flex
+                            lg:w-auto
                             lg:px-0
                             lg:py-6
-                            w-full
-                            lg:w-auto
                           `}
                           onClick={() => setNavbarOpen(false)}
                         >
-                          {menuItem.icon && <Icon icon={menuItem.icon} className="text-xl" />}
-                          {menuItem.title.startsWith("menu.") ? t(menuItem.title) : menuItem.title}
+                          {menuItem.icon && (
+                            <Icon icon={menuItem.icon} className="text-xl" />
+                          )}
+                          {menuItem.title.startsWith("menu.")
+                            ? t(menuItem.title)
+                            : menuItem.title}
                         </Link>
                       </li>
                     ),
@@ -314,8 +348,7 @@ const Header = () => {
         </div>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
-
+export default Header;
