@@ -38,7 +38,7 @@ const menuData: Menu[] = [
   // },
   {
     id: 7,
-    title: "Idioma / Language / 语言 [Beta]",
+    title: "Idioma / Language / 语言",
     newTab: false,
     icon: "mdi:translate-variant",
     submenu: [
