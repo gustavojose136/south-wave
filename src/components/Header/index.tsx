@@ -15,13 +15,11 @@ const Header = () => {
   const { i18n, t } = useTranslation()
   const pathUrl = usePathname()
 
-  // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false)
   const navbarToggleHandler = () => {
     setNavbarOpen(!navbarOpen)
   }
-
-  // Sticky Navbar
+  
   const [sticky, setSticky] = useState(false)
   const handleStickyNavbar = () => {
     if (window.scrollY >= 80) {
@@ -37,18 +35,15 @@ const Header = () => {
     }
   }, [])
 
-  // Submenu handler
   const [openIndex, setOpenIndex] = useState(-1)
   const handleSubmenu = (index: number) => {
     setOpenIndex(openIndex === index ? -1 : index)
   }
 
-  // Função para trocar idioma
   const handleLanguageChange = (lng: string) => {
     i18n.changeLanguage(lng)
   }
 
-  // Classes para exibir gradiente + fixo quando sticky
   const stickyClasses = sticky
     ? "fixed z-[999] w-full border-b border-[#00A3FF]/20 bg-gradient-to-r from-[#1A2129] to-[#2D3339] backdrop-blur-md shadow-lg shadow-black/10"
     : "absolute bg-transparent w-full"

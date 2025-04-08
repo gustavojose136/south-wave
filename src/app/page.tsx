@@ -20,6 +20,7 @@ export default function Home() {
     <main>
       <ScrollUp />
       <Hero />
+      <SisterCompany />
       <About /> 
       {/* <CallToAction /> */}
       {/* <Clients /> */}
@@ -30,7 +31,6 @@ export default function Home() {
       <Products />
       <CulturalProducts />
       <Faq />
-      <SisterCompany />
       {/* <Team /> */}
       {/* <HomeBlogSection posts={posts} /> */}
       <Contact />

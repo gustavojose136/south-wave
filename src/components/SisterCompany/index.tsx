@@ -18,16 +18,13 @@ export default function SisterCompany() {
             {t("sisterCompany.title.highlight")}
           </span>
         </h2>
-
-        {/* Card minimalista */}
         <div className="max-w-4xl mx-auto bg-[#0A1A2F] rounded-xl overflow-hidden shadow-lg border border-[#0D6EFD]/20">
           <div className="flex flex-col md:flex-row items-center">
-            {/* Logo da Galata */}
             <div className="md:w-1/2 p-8 flex justify-center">
               <div className="bg-white/5 rounded-xl p-6 w-48 h-48 flex items-center justify-center">
                 <Image
                   src="/images/galatas-logo.svg"
-                  alt="Galata"
+                  alt="Galatas"
                   width={160}
                   height={160}
                   className="object-contain"
@@ -44,10 +41,9 @@ export default function SisterCompany() {
                 {t("sisterCompany.description")}
               </p>
 
-              {/* Link comentado para referência futura */}
               {/*
               <Link
-                href="https://www.galata.com"
+                href="https://www.galatas.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-[#0D6EFD] text-white px-5 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-[#0747A6]"
